@@ -23,9 +23,10 @@ namespace Sistema_Filmes_Atores
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnFilmeAdd_Click(object sender, EventArgs e)
         {
             frmFilmesAdicionar addFilme = new frmFilmesAdicionar();
+            addFilme.Show();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sistema_Filmes_Atores.Formulários;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,18 @@ namespace Sistema_Filmes_Atores
         public frmMenu()
         {
             InitializeComponent();
+        }
+
+        private void btnFilmes_Click(object sender, EventArgs e)
+        {
+            frmFilmes filmes = new frmFilmes();
+            filmes.Show();
+        }
+
+        private void btnAtores_Click(object sender, EventArgs e)
+        {
+            frmAtores atores = new frmAtores();
+            atores.Show();
         }
     }
 }

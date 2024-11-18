@@ -30,44 +30,35 @@ namespace Sistema_Filmes_Atores
         private void InitializeComponent()
         {
             this.btnFilmes = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAtores = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnFilmes
             // 
-            this.btnFilmes.Location = new System.Drawing.Point(82, 85);
+            this.btnFilmes.Location = new System.Drawing.Point(79, 108);
             this.btnFilmes.Name = "btnFilmes";
             this.btnFilmes.Size = new System.Drawing.Size(169, 48);
             this.btnFilmes.TabIndex = 0;
             this.btnFilmes.Text = "Ver filmes";
             this.btnFilmes.UseVisualStyleBackColor = true;
+            this.btnFilmes.Click += new System.EventHandler(this.btnFilmes_Click);
             // 
-            // button1
+            // btnAtores
             // 
-            this.button1.Location = new System.Drawing.Point(82, 153);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 48);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Ver atores";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(82, 218);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(169, 48);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Ver categorias";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAtores.Location = new System.Drawing.Point(79, 176);
+            this.btnAtores.Name = "btnAtores";
+            this.btnAtores.Size = new System.Drawing.Size(169, 48);
+            this.btnAtores.TabIndex = 1;
+            this.btnAtores.Text = "Ver atores";
+            this.btnAtores.UseVisualStyleBackColor = true;
+            this.btnAtores.Click += new System.EventHandler(this.btnAtores_Click);
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(332, 352);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAtores);
             this.Controls.Add(this.btnFilmes);
             this.Name = "frmMenu";
             this.Text = "frmMenu";
@@ -78,7 +69,6 @@ namespace Sistema_Filmes_Atores
         #endregion
 
         private System.Windows.Forms.Button btnFilmes;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAtores;
     }
 }

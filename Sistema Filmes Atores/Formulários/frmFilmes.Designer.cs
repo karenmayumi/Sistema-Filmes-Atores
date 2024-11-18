@@ -29,82 +29,60 @@ namespace Sistema_Filmes_Atores
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dtFilmes = new System.Windows.Forms.DataGridView();
+            this.btnFilmeAdd = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFilmes)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtPesquisa
             // 
-            this.textBox1.Location = new System.Drawing.Point(38, 67);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(277, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtPesquisa.Location = new System.Drawing.Point(41, 58);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(277, 20);
+            this.txtPesquisa.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 51);
+            this.label1.Location = new System.Drawing.Point(38, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Pesquisar";
             // 
-            // dataGridView1
+            // dtFilmes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(38, 120);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(608, 297);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dtFilmes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtFilmes.Location = new System.Drawing.Point(41, 111);
+            this.dtFilmes.Name = "dtFilmes";
+            this.dtFilmes.Size = new System.Drawing.Size(608, 297);
+            this.dtFilmes.TabIndex = 2;
+            this.dtFilmes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // button1
+            // btnFilmeAdd
             // 
-            this.button1.Location = new System.Drawing.Point(533, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Adicionar Filme";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(533, 47);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Adicionar Ator/Atriz";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(533, 76);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Adicionar Categoria";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnFilmeAdd.Location = new System.Drawing.Point(536, 55);
+            this.btnFilmeAdd.Name = "btnFilmeAdd";
+            this.btnFilmeAdd.Size = new System.Drawing.Size(113, 23);
+            this.btnFilmeAdd.TabIndex = 3;
+            this.btnFilmeAdd.Text = "Adicionar Filme";
+            this.btnFilmeAdd.UseVisualStyleBackColor = true;
+            this.btnFilmeAdd.Click += new System.EventHandler(this.btnFilmeAdd_Click);
             // 
             // frmFilmes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 447);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnFilmeAdd);
+            this.Controls.Add(this.dtFilmes);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPesquisa);
             this.Name = "frmFilmes";
             this.Text = "Filmes";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFilmes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,12 +90,10 @@ namespace Sistema_Filmes_Atores
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dtFilmes;
+        private System.Windows.Forms.Button btnFilmeAdd;
     }
 }
 

@@ -48,8 +48,27 @@
   <ItemGroup>
     <Compile Include="Classes\Login.cs" />
     <Compile Include="Classes\Usuarios.cs" />
+    <Compile Include="DAO\AtorDAO.cs" />
     <Compile Include="Entidades\AtorEntidade.cs" />
     <Compile Include="Entidades\FilmeEntidades.cs" />
+    <Compile Include="Formulários\frmAtores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmAtores.Designer.cs">
+      <DependentUpon>frmAtores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frmAtoresAdicionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmAtoresAdicionar.Designer.cs">
+      <DependentUpon>frmAtoresAdicionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frmAtoresEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmAtoresEditar.Designer.cs">
+      <DependentUpon>frmAtoresEditar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulários\frmFilmes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +101,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formulários\frmAtores.resx">
+      <DependentUpon>frmAtores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frmAtoresAdicionar.resx">
+      <DependentUpon>frmAtoresAdicionar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frmFilmes.resx">
       <DependentUpon>frmFilmes.cs</DependentUpon>
     </EmbeddedResource>

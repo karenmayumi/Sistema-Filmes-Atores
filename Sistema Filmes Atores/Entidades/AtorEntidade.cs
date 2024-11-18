@@ -10,10 +10,12 @@ namespace Sistema_Filmes_Atores.Entidades
     {
         public int Id;
         public string Nome;
+        public string NomeArtistico;
         public int Idade;
+        public string Genero;
         public object[] Linha()
         {
-            return new object[] { Id, Nome, Idade };
+            return new object[] { Id, Nome, NomeArtistico, Idade, Genero };
         }
     }
 }

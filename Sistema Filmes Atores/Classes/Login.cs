@@ -9,7 +9,7 @@ namespace MapaSala.Classes
 {
     public class Login
     {
-        private SqlConnection Conexao = new SqlConnection("Server=LS05MPF;Database=AULA_DS;User Id=sa;Password=admsasql;");
+        private SqlConnection Conexao = new SqlConnection("Server=LS05MPF;Database=FilmesAtores-karenluane;User Id=sa;Password=admsasql;");
         public string Usuario { get; set; }
         public string Senha { get; set; }
 
