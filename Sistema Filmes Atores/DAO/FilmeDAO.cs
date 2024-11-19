@@ -1,4 +1,5 @@
-﻿using Sistema_Filmes_Atores.Entidades;
+﻿using MySqlConnector;
+using Sistema_Filmes_Atores.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,22 +13,22 @@ namespace Sistema_Filmes_Atores.DAO
     class FilmeDAO
     {
         private string LinhaConexao = "Server=localhost;Database=FilmesAtoreskarenluane;User Id=ROOT;Password=;";
-        private SqlConnection Conexao;
+        private MySqlConnection Conexao;
         public FilmeDAO()
         {
-            Conexao = new SqlConnection(LinhaConexao);
+            Conexao = new MySqlConnection(LinhaConexao);
         }
-        public void Inserir(FilmeEntidade filme)
+        public int Inserir(FilmeEntidade filme)
         {
             Conexao.Open();
             string Query = "INSERT into FILMES (Titulo, Categoria, Duracao, IdadeIndicada, Vlr_diaria, Sinopse) VALUES (@titulo,@categoria,@duracao,@idadeindicada,@vlr_diaria,@sinopse); ";
-            SqlCommand Comando = new SqlCommand(Query, Conexao);
-            SqlParameter par1 = new SqlParameter("@titulo", filme.Titulo);
-            SqlParameter par2 = new SqlParameter("@categoria", filme.Categoria);
-            SqlParameter par3 = new SqlParameter("@duracao", filme.Duracao);
-            SqlParameter par4 = new SqlParameter("@idadeindicada", filme.IdadeIndicada);
-            SqlParameter par5 = new SqlParameter("@vlr_diaria", filme.Vlr_Diaria);
-            SqlParameter par6 = new SqlParameter("@sinopse", filme.Sinopse);
+            MySqlCommand Comando = new MySqlCommand(Query, Conexao);
+            MySqlParameter par1 = new MySqlParameter("@titulo", filme.Titulo);
+            MySqlParameter par2 = new MySqlParameter("@categoria", filme.Categoria);
+            MySqlParameter par3 = new MySqlParameter("@duracao", filme.Duracao);
+            MySqlParameter par4 = new MySqlParameter("@idadeindicada", filme.IdadeIndicada);
+            MySqlParameter par5 = new MySqlParameter("@vlr_diaria", filme.Vlr_Diaria);
+            MySqlParameter par6 = new MySqlParameter("@sinopse", filme.Sinopse);
 
             Comando.Parameters.Add(par1);
             Comando.Parameters.Add(par2);
@@ -35,17 +36,18 @@ namespace Sistema_Filmes_Atores.DAO
             Comando.Parameters.Add(par4);
             Comando.Parameters.Add(par5);
             Comando.Parameters.Add(par6);
-            Comando.ExecuteNonQuery();
+            int retorno = Comando.ExecuteNonQuery();
             Conexao.Close();
+            return retorno;
         }
         public DataTable ObterFilmes()
         {
             DataTable retorno = new DataTable();
             Conexao.Open();
             string query = "SELECT ID, TITULO, CATEGORIA, IDADEINDICADA, VLR_DIARIA, SINOPSE FROM FILMES ORDER BY ID DESC";
-            SqlCommand Comando = new SqlCommand(query, Conexao);
+            MySqlCommand Comando = new MySqlCommand(query, Conexao);
 
-            SqlDataReader Leitura = Comando.ExecuteReader();
+            MySqlDataReader Leitura = Comando.ExecuteReader();
 
             foreach (var atributos in typeof(FilmeEntidade).GetProperties())
             {

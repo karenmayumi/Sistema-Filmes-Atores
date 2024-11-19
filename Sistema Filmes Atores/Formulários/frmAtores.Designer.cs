@@ -54,6 +54,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.dtAtores.Size = new System.Drawing.Size(608, 297);
             this.dtAtores.TabIndex = 8;
             this.dtAtores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtAtores_CellClick);
+            this.dtAtores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtAtores_CellDoubleClick);
             // 
             // label1
             // 
@@ -70,6 +71,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(277, 20);
             this.txtPesquisar.TabIndex = 6;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
             // 
             // frmAtores
             // 

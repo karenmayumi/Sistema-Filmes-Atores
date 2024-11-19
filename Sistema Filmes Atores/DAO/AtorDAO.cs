@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MySqlConnector;
 using Sistema_Filmes_Atores.Entidades;
 using System;
 using System.Collections.Generic;
@@ -115,7 +115,7 @@ namespace Sistema_Filmes_Atores.DAO
             }
             else
             {
-                query = "SELECT * FROM ATORES WHERE NOME LIKE '%" + search + "%' OR NOMEARTISTICO LIKE '%" + search + "%' ORDER BY NOME DESC";
+                query = "SELECT * FROM ATORES WHERE NOME LIKE '%" + search + "%' OR NOMEARTISTICO LIKE '%" + search + "%' ORDER BY ID DESC";
             }
             MySqlCommand Comando = new MySqlCommand(query, Conexao);
 
@@ -141,6 +141,25 @@ namespace Sistema_Filmes_Atores.DAO
             }
             Conexao.Close();
             return retorno;
+        }
+        public void PesquisarID(int id)
+        {
+            DataTable dataTable = new DataTable();
+            Conexao.Open();
+            string query = "SELECT Id, Login, Senha, Ativo Nome FROM Usuarios Where Id = @id Order by Id desc";
+            SqlCommand Comando = new SqlCommand(query, Conexao);
+            Comando.Parameters.AddWithValue("@id", id);
+            SqlDataReader resultado = Comando.ExecuteReader();
+
+            if (resultado.Read())
+            {
+                Id = resultado.GetInt32(0);
+                Login = resultado.GetString(1);
+                Senha = resultado.GetString(2);
+                Ativo = resultado.GetBoolean(3);
+            }
+
+            Conexao.Close();
         }
     }
 }

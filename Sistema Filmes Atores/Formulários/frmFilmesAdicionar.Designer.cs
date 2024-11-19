@@ -34,7 +34,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtFilme = new System.Windows.Forms.TextBox();
+            this.txtTitulo = new System.Windows.Forms.TextBox();
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.numDuracao = new System.Windows.Forms.NumericUpDown();
             this.numIdade = new System.Windows.Forms.NumericUpDown();
@@ -91,12 +91,12 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label5.TabIndex = 4;
             this.label5.Text = "Idade Indicada(Acima de...)";
             // 
-            // txtFilme
+            // txtTitulo
             // 
-            this.txtFilme.Location = new System.Drawing.Point(33, 49);
-            this.txtFilme.Name = "txtFilme";
-            this.txtFilme.Size = new System.Drawing.Size(163, 20);
-            this.txtFilme.TabIndex = 6;
+            this.txtTitulo.Location = new System.Drawing.Point(33, 49);
+            this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.Size = new System.Drawing.Size(163, 20);
+            this.txtTitulo.TabIndex = 6;
             // 
             // txtCategoria
             // 
@@ -165,7 +165,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.Controls.Add(this.numIdade);
             this.Controls.Add(this.numDuracao);
             this.Controls.Add(this.txtCategoria);
-            this.Controls.Add(this.txtFilme);
+            this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -187,7 +187,7 @@ namespace Sistema_Filmes_Atores.Formulários
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtFilme;
+        private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.NumericUpDown numDuracao;
         private System.Windows.Forms.NumericUpDown numIdade;
