@@ -8,11 +8,11 @@ namespace Sistema_Filmes_Atores.Entidades
 {
     public class AtorEntidade
     {
-        public int Id;
-        public string Nome;
-        public string NomeArtistico;
-        public int Idade;
-        public string Genero;
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string NomeArtistico { get; set; }
+        public int Idade { get; set; }
+        public string Genero { get; set; }
         public object[] Linha()
         {
             return new object[] { Id, Nome, NomeArtistico, Idade, Genero };

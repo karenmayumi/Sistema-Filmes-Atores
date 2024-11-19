@@ -11,13 +11,13 @@ namespace Sistema_Filmes_Atores.DAO
 {
     public class AtorDAO
     {
-        private string LinhaConexao = "Server=LS05MPF;Database=Aula_DS;User Id=SA;Password=admsasql;"; //LS05M020
+        private string LinhaConexao = "Server=localhost;Database=FilmesAtoreskarenluane;User Id=ROOT;Password='';";
         private SqlConnection Conexao;
         public AtorDAO()
         {
             Conexao = new SqlConnection(LinhaConexao);
         }
-        public void Inserir(AtorEntidade ator)
+        public int Inserir(AtorEntidade ator)
         {
             Conexao.Open();
             string Query = "INSERT into ATORES (Nome, NomeArtistico, Idade, Genero) VALUES (@nome,@nomeartistico,@idade,@genero); ";
@@ -31,14 +31,17 @@ namespace Sistema_Filmes_Atores.DAO
             Comando.Parameters.Add(par2);
             Comando.Parameters.Add(par3);
             Comando.Parameters.Add(par4);
-            Comando.ExecuteNonQuery();
+
+            int retorno = Comando.ExecuteNonQuery();
+
             Conexao.Close();
+            return retorno;
         }
         public DataTable PreencherComboBox()
         {
             DataTable dataTable = new DataTable();
 
-            string query = "SELECT Id, Nome FROM Atores";
+            string query = "SELECT Id, Nome, Nomeartistico FROM Atores";
 
             using (SqlConnection connection = new SqlConnection(LinhaConexao))
             {
@@ -59,7 +62,7 @@ namespace Sistema_Filmes_Atores.DAO
             return dataTable;
         }
 
-        public DataTable ObterCursos()
+        public DataTable ObterAtores()
         {
             DataTable retorno = new DataTable();
             Conexao.Open();

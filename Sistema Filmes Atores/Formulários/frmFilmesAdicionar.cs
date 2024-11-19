@@ -16,5 +16,10 @@ namespace Sistema_Filmes_Atores.Formulários
         {
             InitializeComponent();
         }
+
+        private void btnAddFilme_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

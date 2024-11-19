@@ -49,8 +49,11 @@
     <Compile Include="Classes\Login.cs" />
     <Compile Include="Classes\Usuarios.cs" />
     <Compile Include="DAO\AtorDAO.cs" />
+    <Compile Include="DAO\FilmeDAO.cs" />
+    <Compile Include="DAO\PersonagemDAO.cs" />
     <Compile Include="Entidades\AtorEntidade.cs" />
-    <Compile Include="Entidades\FilmeEntidades.cs" />
+    <Compile Include="Entidades\FilmeEntidade.cs" />
+    <Compile Include="Entidades\PersonagemEntidade.cs" />
     <Compile Include="Formulários\frmAtores.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -30,15 +30,15 @@ namespace Sistema_Filmes_Atores.Formulários
         private void InitializeComponent()
         {
             this.btnAddAtor = new System.Windows.Forms.Button();
-            this.numDuracao = new System.Windows.Forms.NumericUpDown();
+            this.numIdade = new System.Windows.Forms.NumericUpDown();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxGenero = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNomeArtistico = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numDuracao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numIdade)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddAtor
@@ -51,12 +51,12 @@ namespace Sistema_Filmes_Atores.Formulários
             this.btnAddAtor.UseVisualStyleBackColor = true;
             this.btnAddAtor.Click += new System.EventHandler(this.btnAddAtor_Click);
             // 
-            // numDuracao
+            // numIdade
             // 
-            this.numDuracao.Location = new System.Drawing.Point(27, 142);
-            this.numDuracao.Name = "numDuracao";
-            this.numDuracao.Size = new System.Drawing.Size(163, 20);
-            this.numDuracao.TabIndex = 23;
+            this.numIdade.Location = new System.Drawing.Point(27, 142);
+            this.numIdade.Name = "numIdade";
+            this.numIdade.Size = new System.Drawing.Size(163, 20);
+            this.numIdade.TabIndex = 23;
             // 
             // txtNome
             // 
@@ -83,17 +83,17 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label1.TabIndex = 15;
             this.label1.Text = "Nome";
             // 
-            // comboBox1
+            // cbxGenero
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbxGenero.FormattingEnabled = true;
+            this.cbxGenero.Items.AddRange(new object[] {
             "Homem",
             "Mulher",
             "Não Binário"});
-            this.comboBox1.Location = new System.Drawing.Point(27, 200);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(163, 21);
-            this.comboBox1.TabIndex = 29;
+            this.cbxGenero.Location = new System.Drawing.Point(27, 200);
+            this.cbxGenero.Name = "cbxGenero";
+            this.cbxGenero.Size = new System.Drawing.Size(163, 21);
+            this.cbxGenero.TabIndex = 29;
             // 
             // label3
             // 
@@ -128,15 +128,15 @@ namespace Sistema_Filmes_Atores.Formulários
             this.Controls.Add(this.txtNomeArtistico);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbxGenero);
             this.Controls.Add(this.btnAddAtor);
-            this.Controls.Add(this.numDuracao);
+            this.Controls.Add(this.numIdade);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmAtoresAdicionar";
             this.Text = "Adicionar Ator/Atriz";
-            ((System.ComponentModel.ISupportInitialize)(this.numDuracao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numIdade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,11 +145,11 @@ namespace Sistema_Filmes_Atores.Formulários
         #endregion
 
         private System.Windows.Forms.Button btnAddAtor;
-        private System.Windows.Forms.NumericUpDown numDuracao;
+        private System.Windows.Forms.NumericUpDown numIdade;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxGenero;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNomeArtistico;
         private System.Windows.Forms.Label label4;

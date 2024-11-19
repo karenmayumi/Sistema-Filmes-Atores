@@ -34,14 +34,14 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtFilme = new System.Windows.Forms.TextBox();
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.numDuracao = new System.Windows.Forms.NumericUpDown();
             this.numIdade = new System.Windows.Forms.NumericUpDown();
             this.rtxtSinopse = new System.Windows.Forms.RichTextBox();
-            this.rtxtAtores = new System.Windows.Forms.RichTextBox();
             this.btnAddFilme = new System.Windows.Forms.Button();
+            this.txtVlrDiaria = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numDuracao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numIdade)).BeginInit();
             this.SuspendLayout();
@@ -91,15 +91,6 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label5.TabIndex = 4;
             this.label5.Text = "Idade Indicada(Acima de...)";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(240, 173);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Ator(es)";
-            // 
             // txtFilme
             // 
             this.txtFilme.Location = new System.Drawing.Point(33, 49);
@@ -136,14 +127,6 @@ namespace Sistema_Filmes_Atores.Formulários
             this.rtxtSinopse.TabIndex = 12;
             this.rtxtSinopse.Text = "";
             // 
-            // rtxtAtores
-            // 
-            this.rtxtAtores.Location = new System.Drawing.Point(243, 190);
-            this.rtxtAtores.Name = "rtxtAtores";
-            this.rtxtAtores.Size = new System.Drawing.Size(161, 82);
-            this.rtxtAtores.TabIndex = 13;
-            this.rtxtAtores.Text = "";
-            // 
             // btnAddFilme
             // 
             this.btnAddFilme.Location = new System.Drawing.Point(33, 311);
@@ -152,20 +135,37 @@ namespace Sistema_Filmes_Atores.Formulários
             this.btnAddFilme.TabIndex = 14;
             this.btnAddFilme.Text = "Adicionar Filme";
             this.btnAddFilme.UseVisualStyleBackColor = true;
+            this.btnAddFilme.Click += new System.EventHandler(this.btnAddFilme_Click);
+            // 
+            // txtVlrDiaria
+            // 
+            this.txtVlrDiaria.Location = new System.Drawing.Point(243, 189);
+            this.txtVlrDiaria.Name = "txtVlrDiaria";
+            this.txtVlrDiaria.Size = new System.Drawing.Size(163, 20);
+            this.txtVlrDiaria.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(240, 173);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 13);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Valor da diária";
             // 
             // frmFilmesAdicionar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(442, 380);
+            this.Controls.Add(this.txtVlrDiaria);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnAddFilme);
-            this.Controls.Add(this.rtxtAtores);
             this.Controls.Add(this.rtxtSinopse);
             this.Controls.Add(this.numIdade);
             this.Controls.Add(this.numDuracao);
             this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.txtFilme);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -187,13 +187,13 @@ namespace Sistema_Filmes_Atores.Formulários
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtFilme;
         private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.NumericUpDown numDuracao;
         private System.Windows.Forms.NumericUpDown numIdade;
         private System.Windows.Forms.RichTextBox rtxtSinopse;
-        private System.Windows.Forms.RichTextBox rtxtAtores;
         private System.Windows.Forms.Button btnAddFilme;
+        private System.Windows.Forms.TextBox txtVlrDiaria;
+        private System.Windows.Forms.Label label6;
     }
 }
