@@ -1,4 +1,5 @@
-﻿using Sistema_Filmes_Atores.Entidades;
+﻿using MySql.Data.MySqlClient;
+using Sistema_Filmes_Atores.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,21 +12,21 @@ namespace Sistema_Filmes_Atores.DAO
 {
     public class AtorDAO
     {
-        private string LinhaConexao = "Server=localhost;Database=FilmesAtoreskarenluane;User Id=ROOT;Password='';";
-        private SqlConnection Conexao;
+        private string LinhaConexao = "Server=localhost;Database=FilmesAtoreskarenluane;User Id=root;Password=;";
+        private MySqlConnection Conexao;
         public AtorDAO()
         {
-            Conexao = new SqlConnection(LinhaConexao);
+            Conexao = new MySqlConnection(LinhaConexao);
         }
         public int Inserir(AtorEntidade ator)
         {
             Conexao.Open();
             string Query = "INSERT into ATORES (Nome, NomeArtistico, Idade, Genero) VALUES (@nome,@nomeartistico,@idade,@genero); ";
-            SqlCommand Comando = new SqlCommand(Query, Conexao);
-            SqlParameter par1 = new SqlParameter("@nome", ator.Nome);
-            SqlParameter par2 = new SqlParameter("@nomeartistico", ator.NomeArtistico);
-            SqlParameter par3 = new SqlParameter("@idade", ator.Idade);
-            SqlParameter par4 = new SqlParameter("@genero", ator.Genero);
+            MySqlCommand Comando = new MySqlCommand(Query, Conexao);
+            MySqlParameter par1 = new MySqlParameter("@nome", ator.Nome);
+            MySqlParameter par2 = new MySqlParameter("@nomeartistico", ator.NomeArtistico);
+            MySqlParameter par3 = new MySqlParameter("@idade", ator.Idade);
+            MySqlParameter par4 = new MySqlParameter("@genero", ator.Genero);
 
             Comando.Parameters.Add(par1);
             Comando.Parameters.Add(par2);
@@ -67,9 +68,9 @@ namespace Sistema_Filmes_Atores.DAO
             DataTable retorno = new DataTable();
             Conexao.Open();
             string query = "SELECT ID, NOME, NOMEARTISTICO, IDADE, GENERO FROM ATORES ORDER BY ID DESC";
-            SqlCommand Comando = new SqlCommand(query, Conexao);
+            MySqlCommand Comando = new MySqlCommand(query, Conexao);
 
-            SqlDataReader Leitura = Comando.ExecuteReader();
+            MySqlDataReader Leitura = Comando.ExecuteReader();
 
             foreach (var atributos in typeof(AtorEntidade).GetProperties())
             {
@@ -96,8 +97,8 @@ namespace Sistema_Filmes_Atores.DAO
         {
             Conexao.Open();
             string Query = "DELETE FROM ATORES WHERE id = @id; ";
-            SqlCommand Comando = new SqlCommand(Query, Conexao);
-            SqlParameter par1 = new SqlParameter("@id", indexCurso);
+            MySqlCommand Comando = new MySqlCommand(Query, Conexao);
+            MySqlParameter par1 = new MySqlParameter("@id", indexCurso);
 
             Comando.Parameters.Add(par1);
             Comando.ExecuteNonQuery();
@@ -116,9 +117,9 @@ namespace Sistema_Filmes_Atores.DAO
             {
                 query = "SELECT * FROM ATORES WHERE NOME LIKE '%" + search + "%' OR NOMEARTISTICO LIKE '%" + search + "%' ORDER BY NOME DESC";
             }
-            SqlCommand Comando = new SqlCommand(query, Conexao);
+            MySqlCommand Comando = new MySqlCommand(query, Conexao);
 
-            SqlDataReader Leitura = Comando.ExecuteReader();
+            MySqlDataReader Leitura = Comando.ExecuteReader();
 
             foreach (var atributos in typeof(AtorEntidade).GetProperties())
             {
