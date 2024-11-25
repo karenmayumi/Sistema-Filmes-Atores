@@ -54,25 +54,24 @@ namespace Sistema_Filmes_Atores.Formulários
 
         private void btnEditAtor_Click(object sender, EventArgs e)
         {
-            //Finalizar atualização
+            AtorEntidade ator = new AtorEntidade();
+            ator.Id = Convert.ToInt32(txtId.Text);
+            ator.Nome = txtNome.Text;
+            ator.NomeArtistico = txtNomeArtistico.Text;
+            ator.Idade = Convert.ToInt32(numIdade.Value);
+            ator.Genero = cbxGenero.Text;
 
-            //AtorEntidade ator = new AtorEntidade();
-            //ator.Nome = txtNome.Text;
-            //ator.NomeArtistico = txtNomeArtistico.Text;
-            //ator.Idade = Convert.ToInt32(numIdade.Value);
-            //ator.Genero = cbxGenero.Text;
+            int resposta = dao.AtualizarAtor(ator);
 
-            //int resposta = dao.AtualizarAtor(ator);
-
-            //if (resposta == 1)
-            //{
-            //    MessageBox.Show("Ator excluído com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    this.Close();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Erro ao excluir", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            if (resposta == 1)
+            {
+                MessageBox.Show("Ator atualizado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Erro ao atualizar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
     }

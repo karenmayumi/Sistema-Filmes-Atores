@@ -38,6 +38,28 @@ namespace Sistema_Filmes_Atores.DAO
             Conexao.Close();
             return retorno;
         }
+        public int AtualizarAtor(AtorEntidade ator)
+        {
+            string Query = "UPDATE ATORES SET nome=@nome, nomeartistico=@nomeartistico, idade=@idade, genero=@genero WHERE id = @id ; ";
+            Conexao.Open();
+            MySqlCommand Comando = new MySqlCommand(Query, Conexao);
+            MySqlParameter par1 = new MySqlParameter("@nome", ator.Nome);
+            MySqlParameter par2 = new MySqlParameter("@nomeartistico", ator.NomeArtistico);
+            MySqlParameter par3 = new MySqlParameter("@idade", ator.Idade);
+            MySqlParameter par4 = new MySqlParameter("@genero", ator.Genero);
+            MySqlParameter par5 = new MySqlParameter("@id", ator.Id);
+
+            Comando.Parameters.Add(par1);
+            Comando.Parameters.Add(par2);
+            Comando.Parameters.Add(par3);
+            Comando.Parameters.Add(par4);
+            Comando.Parameters.Add(par5);
+
+            int retorno = Comando.ExecuteNonQuery();
+
+            Conexao.Close();
+            return retorno;
+        }
         public DataTable PreencherComboBox()
         {
             DataTable dataTable = new DataTable();
