@@ -12,7 +12,7 @@ namespace Sistema_Filmes_Atores.DAO
 {
     class FilmeDAO
     {
-        private string LinhaConexao = "Server=localhost;Database=FilmesAtoreskarenluane;User Id=ROOT;Password=;";
+        private string LinhaConexao = "Server=localhost;Database=FilmesAtoreskarenluane;User Id=root;Password=;";
         private MySqlConnection Conexao;
         public FilmeDAO()
         {
@@ -44,7 +44,7 @@ namespace Sistema_Filmes_Atores.DAO
         {
             DataTable retorno = new DataTable();
             Conexao.Open();
-            string query = "SELECT ID, TITULO, CATEGORIA, IDADEINDICADA, VLR_DIARIA, SINOPSE FROM FILMES ORDER BY ID DESC";
+            string query = "SELECT ID, TITULO, CATEGORIA, DURACAO, IDADEINDICADA, SINOPSE, VLR_DIARIA FROM FILMES ORDER BY ID DESC";
             MySqlCommand Comando = new MySqlCommand(query, Conexao);
 
             MySqlDataReader Leitura = Comando.ExecuteReader();
