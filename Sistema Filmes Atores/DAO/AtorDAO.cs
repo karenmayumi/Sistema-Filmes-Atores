@@ -93,7 +93,7 @@ namespace Sistema_Filmes_Atores.DAO
             Conexao.Close();
             return retorno;
         }
-        public void ExcluirAtor(int indexCurso)
+        public int ExcluirAtor(int indexCurso)
         {
             Conexao.Open();
             string Query = "DELETE FROM ATORES WHERE id = @id; ";
@@ -101,8 +101,10 @@ namespace Sistema_Filmes_Atores.DAO
             MySqlParameter par1 = new MySqlParameter("@id", indexCurso);
 
             Comando.Parameters.Add(par1);
-            Comando.ExecuteNonQuery();
+            int retorno = Comando.ExecuteNonQuery();
+
             Conexao.Close();
+            return retorno;
         }
         public DataTable PesquisarAtores(string search)
         {
@@ -142,24 +144,27 @@ namespace Sistema_Filmes_Atores.DAO
             Conexao.Close();
             return retorno;
         }
-        public void PesquisarID(int id)
+        public AtorEntidade PesquisarID(int id)
         {
             DataTable dataTable = new DataTable();
             Conexao.Open();
-            string query = "SELECT Id, Login, Senha, Ativo Nome FROM Usuarios Where Id = @id Order by Id desc";
-            SqlCommand Comando = new SqlCommand(query, Conexao);
+            string query = "SELECT Id, Nome, NomeArtistico, Idade, Genero FROM Atores Where Id = @id Order by Id desc";
+            MySqlCommand Comando = new MySqlCommand(query, Conexao);
             Comando.Parameters.AddWithValue("@id", id);
-            SqlDataReader resultado = Comando.ExecuteReader();
+            MySqlDataReader resultado = Comando.ExecuteReader();
 
+            AtorEntidade a = new AtorEntidade();
             if (resultado.Read())
             {
-                Id = resultado.GetInt32(0);
-                Login = resultado.GetString(1);
-                Senha = resultado.GetString(2);
-                Ativo = resultado.GetBoolean(3);
+                a.Id = resultado.GetInt32(0);
+                a.Nome = resultado.GetString(1);
+                a.NomeArtistico = resultado.GetString(2);
+                a.Idade = resultado.GetInt32(3);
+                a.Genero = resultado.GetString(4);
             }
 
             Conexao.Close();
+            return a;
         }
     }
 }

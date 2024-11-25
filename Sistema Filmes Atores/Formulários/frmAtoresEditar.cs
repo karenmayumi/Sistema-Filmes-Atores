@@ -27,5 +27,53 @@ namespace Sistema_Filmes_Atores.Formulários
             numIdade.Value = ator.Idade;
             cbxGenero.Text = ator.Genero;
         }
+
+        private void btnDeleteAtor_Click(object sender, EventArgs e)
+        {
+            AtorEntidade ator = new AtorEntidade();
+            ator.Nome = txtNome.Text;
+            ator.NomeArtistico = txtNomeArtistico.Text;
+            ator.Idade = Convert.ToInt32(numIdade.Value);
+            ator.Genero = cbxGenero.Text;
+
+            AtorDAO dao = new AtorDAO();
+            int id = Convert.ToInt32(txtId.Text);
+
+            int resposta = dao.ExcluirAtor(id);
+
+            if (resposta == 1)
+            {
+                MessageBox.Show("Ator excluído com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Erro ao excluir", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEditAtor_Click(object sender, EventArgs e)
+        {
+            //Finalizar atualização
+
+            //AtorEntidade ator = new AtorEntidade();
+            //ator.Nome = txtNome.Text;
+            //ator.NomeArtistico = txtNomeArtistico.Text;
+            //ator.Idade = Convert.ToInt32(numIdade.Value);
+            //ator.Genero = cbxGenero.Text;
+
+            //int resposta = dao.AtualizarAtor(ator);
+
+            //if (resposta == 1)
+            //{
+            //    MessageBox.Show("Ator excluído com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    this.Close();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Erro ao excluir", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+
+        }
     }
 }

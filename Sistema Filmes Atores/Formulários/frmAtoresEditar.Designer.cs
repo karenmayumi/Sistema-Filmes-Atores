@@ -89,6 +89,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.btnEditAtor.TabIndex = 37;
             this.btnEditAtor.Text = "Editar Ator/Atriz";
             this.btnEditAtor.UseVisualStyleBackColor = true;
+            this.btnEditAtor.Click += new System.EventHandler(this.btnEditAtor_Click);
             // 
             // numIdade
             // 
@@ -130,6 +131,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.btnDeleteAtor.TabIndex = 42;
             this.btnDeleteAtor.Text = "Deletar Ator/Atriz";
             this.btnDeleteAtor.UseVisualStyleBackColor = true;
+            this.btnDeleteAtor.Click += new System.EventHandler(this.btnDeleteAtor_Click);
             // 
             // label5
             // 
