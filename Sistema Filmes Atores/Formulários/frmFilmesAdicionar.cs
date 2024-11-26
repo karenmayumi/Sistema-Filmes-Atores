@@ -36,7 +36,7 @@ namespace Sistema_Filmes_Atores.Formulários
 
             if (resposta == 1)
             {
-                MessageBox.Show("Filme adicionado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ator adicionado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else

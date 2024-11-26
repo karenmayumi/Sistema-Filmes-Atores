@@ -1,6 +1,4 @@
-﻿using Sistema_Filmes_Atores.DAO;
-using Sistema_Filmes_Atores.Entidades;
-using Sistema_Filmes_Atores.Formulários;
+﻿using Sistema_Filmes_Atores.Formulários;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,21 +13,9 @@ namespace Sistema_Filmes_Atores
 {
     public partial class frmFilmes : Form
     {
-        DataTable dados;
-        FilmeDAO dao = new FilmeDAO();
-        int LinhaSelecionada;
         public frmFilmes()
         {
             InitializeComponent();
-
-            dados = new DataTable();
-            foreach (var atributos in typeof(FilmeEntidade).GetProperties())
-            {
-                dados.Columns.Add(atributos.Name);
-            }
-
-            dados = dao.ObterFilmes();
-            dtFilmes.DataSource = dados;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
