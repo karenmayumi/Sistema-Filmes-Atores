@@ -146,7 +146,7 @@ namespace Sistema_Filmes_Atores.Formulários
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(99, 24);
+            this.txtId.Location = new System.Drawing.Point(163, 223);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(50, 20);
             this.txtId.TabIndex = 44;
