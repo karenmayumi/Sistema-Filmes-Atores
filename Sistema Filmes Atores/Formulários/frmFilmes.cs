@@ -42,5 +42,10 @@ namespace Sistema_Filmes_Atores
             frmFilmesAdicionar addFilme = new frmFilmesAdicionar();
             addFilme.Show();
         }
+
+        private void txtPesquisa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
