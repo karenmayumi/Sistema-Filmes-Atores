@@ -43,7 +43,7 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             // btnAddAtor
             // 
-            this.btnAddAtor.Location = new System.Drawing.Point(27, 260);
+            this.btnAddAtor.Location = new System.Drawing.Point(27, 256);
             this.btnAddAtor.Name = "btnAddAtor";
             this.btnAddAtor.Size = new System.Drawing.Size(163, 23);
             this.btnAddAtor.TabIndex = 27;
@@ -82,6 +82,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 15;
             this.label1.Text = "Nome";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cbxGenero
             // 
