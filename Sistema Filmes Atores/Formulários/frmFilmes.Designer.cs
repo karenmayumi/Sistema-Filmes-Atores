@@ -60,7 +60,8 @@ namespace Sistema_Filmes_Atores
             this.dtFilmes.Name = "dtFilmes";
             this.dtFilmes.Size = new System.Drawing.Size(608, 297);
             this.dtFilmes.TabIndex = 2;
-            this.dtFilmes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dtFilmes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtFilmes_CellClick);
+            this.dtFilmes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtFilmes_CellDoubleClick);
             // 
             // btnFilmeAdd
             // 
