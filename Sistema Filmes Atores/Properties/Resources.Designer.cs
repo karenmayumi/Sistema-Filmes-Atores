@@ -93,6 +93,16 @@ namespace Sistema_Filmes_Atores.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap filmes {
+            get {
+                object obj = ResourceManager.GetObject("filmes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap filmes_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("filmes-removebg-preview", resourceCulture);
@@ -106,6 +116,16 @@ namespace Sistema_Filmes_Atores.Properties {
         internal static System.Drawing.Bitmap fotinhooo {
             get {
                 object obj = ResourceManager.GetObject("fotinhooo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fotos_Divertida_Mente_2 {
+            get {
+                object obj = ResourceManager.GetObject("Fotos Divertida Mente 2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

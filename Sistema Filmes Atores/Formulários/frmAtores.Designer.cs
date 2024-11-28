@@ -44,13 +44,13 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             this.btnAtorAdd.AllowDrop = true;
             this.btnAtorAdd.AutoEllipsis = true;
-            this.btnAtorAdd.BackColor = System.Drawing.Color.Wheat;
+            this.btnAtorAdd.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAtorAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAtorAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtorAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnAtorAdd.Location = new System.Drawing.Point(406, 94);
+            this.btnAtorAdd.Location = new System.Drawing.Point(406, 87);
             this.btnAtorAdd.Name = "btnAtorAdd";
-            this.btnAtorAdd.Size = new System.Drawing.Size(138, 25);
+            this.btnAtorAdd.Size = new System.Drawing.Size(140, 30);
             this.btnAtorAdd.TabIndex = 5;
             this.btnAtorAdd.Text = "Adicionar Ator/Atriz";
             this.btnAtorAdd.UseVisualStyleBackColor = false;
@@ -58,11 +58,11 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             // dtAtores
             // 
-            this.dtAtores.BackgroundColor = System.Drawing.Color.NavajoWhite;
+            this.dtAtores.BackgroundColor = System.Drawing.Color.Crimson;
             this.dtAtores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtAtores.Location = new System.Drawing.Point(12, 123);
             this.dtAtores.Name = "dtAtores";
-            this.dtAtores.Size = new System.Drawing.Size(717, 297);
+            this.dtAtores.Size = new System.Drawing.Size(694, 265);
             this.dtAtores.TabIndex = 8;
             this.dtAtores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtAtores_CellClick);
             this.dtAtores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtAtores_CellDoubleClick);
@@ -70,9 +70,10 @@ namespace Sistema_Filmes_Atores.Formulários
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 70);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 24);
             this.label1.TabIndex = 7;
@@ -80,9 +81,9 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             // txtPesquisar
             // 
-            this.txtPesquisar.Location = new System.Drawing.Point(12, 97);
+            this.txtPesquisar.Location = new System.Drawing.Point(16, 93);
             this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(388, 20);
+            this.txtPesquisar.Size = new System.Drawing.Size(384, 20);
             this.txtPesquisar.TabIndex = 6;
             this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
             // 
@@ -90,6 +91,7 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Crimson;
             this.label2.Location = new System.Drawing.Point(328, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 39);
@@ -100,9 +102,9 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.Image = global::Sistema_Filmes_Atores.Properties.Resources.filmes_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(609, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(578, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(137, 96);
+            this.pictureBox1.Size = new System.Drawing.Size(121, 105);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -112,8 +114,8 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(758, 432);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(718, 400);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtAtores);

@@ -213,5 +213,11 @@
   <ItemGroup>
     <None Include="Resources\filmes-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filmes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fotos Divertida Mente 2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
