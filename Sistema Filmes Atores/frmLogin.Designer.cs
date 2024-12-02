@@ -40,10 +40,10 @@ namespace Sistema_Filmes_Atores
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(219, 158);
+            this.label2.Location = new System.Drawing.Point(209, 164);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 22);
             this.label2.TabIndex = 16;
@@ -54,9 +54,9 @@ namespace Sistema_Filmes_Atores
             this.btnEntrar.BackColor = System.Drawing.Color.DarkRed;
             this.btnEntrar.Font = new System.Drawing.Font("Microsoft YaHei", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEntrar.Location = new System.Drawing.Point(279, 373);
+            this.btnEntrar.Location = new System.Drawing.Point(276, 342);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(327, 49);
+            this.btnEntrar.Size = new System.Drawing.Size(271, 60);
             this.btnEntrar.TabIndex = 15;
             this.btnEntrar.Text = "ENTRAR";
             this.btnEntrar.UseVisualStyleBackColor = false;
@@ -64,19 +64,19 @@ namespace Sistema_Filmes_Atores
             // 
             // txtSenha
             // 
-            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(213, 290);
+            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Location = new System.Drawing.Point(213, 272);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(410, 56);
+            this.txtSenha.Size = new System.Drawing.Size(410, 38);
             this.txtSenha.TabIndex = 14;
             // 
             // txtLogin
             // 
-            this.txtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogin.Location = new System.Drawing.Point(213, 183);
+            this.txtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogin.Location = new System.Drawing.Point(213, 189);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(410, 56);
+            this.txtLogin.Size = new System.Drawing.Size(410, 38);
             this.txtLogin.TabIndex = 13;
             // 
             // label1
@@ -85,7 +85,7 @@ namespace Sistema_Filmes_Atores
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 51F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(310, 9);
+            this.label1.Location = new System.Drawing.Point(298, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(270, 82);
             this.label1.TabIndex = 12;
@@ -94,8 +94,9 @@ namespace Sistema_Filmes_Atores
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(219, 265);
+            this.label3.Location = new System.Drawing.Point(209, 247);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 22);
             this.label3.TabIndex = 17;
@@ -105,15 +106,16 @@ namespace Sistema_Filmes_Atores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources.filmes;
+            this.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources.Sistema_de_Locadora4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(836, 450);
+            this.ClientSize = new System.Drawing.Size(838, 454);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Name = "frmLogin";
             this.Text = "Login";
             this.ResumeLayout(false);
