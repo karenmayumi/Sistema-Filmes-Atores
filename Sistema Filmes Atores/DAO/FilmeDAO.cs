@@ -89,9 +89,10 @@ namespace Sistema_Filmes_Atores.DAO
                     f.Id = Convert.ToInt32(Leitura[0]);
                     f.Titulo = Leitura[1].ToString();
                     f.Categoria = Leitura[2].ToString();
-                    f.IdadeIndicada = Convert.ToInt32(Leitura[3]);
-                    f.Vlr_Diaria = (float)Convert.ToDecimal(Leitura[4]);
-                    f.Sinopse = Leitura[5].ToString();
+                    f.Duracao = Convert.ToInt32(Leitura[3]);
+                    f.IdadeIndicada = Convert.ToInt32(Leitura[4]);
+                    f.Vlr_Diaria = (float)Convert.ToDecimal(Leitura[5]);
+                    f.Sinopse = Leitura[6].ToString();
                     retorno.Rows.Add(f.Linha());
                 }
             }

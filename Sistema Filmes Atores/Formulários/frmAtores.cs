@@ -63,5 +63,6 @@ namespace Sistema_Filmes_Atores.Formulários
             editar.FormClosed += frmCursos_FormClosed;
             editar.ShowDialog();
         }
+
     }
 }

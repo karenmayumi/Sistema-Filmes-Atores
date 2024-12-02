@@ -151,6 +151,24 @@
     <Compile Include="Formulários\frmFilmesEditar.Designer.cs">
       <DependentUpon>frmFilmesEditar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulários\frmPersonagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmPersonagem.Designer.cs">
+      <DependentUpon>frmPersonagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frmPersonagemAdicionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmPersonagemAdicionar.Designer.cs">
+      <DependentUpon>frmPersonagemAdicionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frmPersonagemEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmPersonagemEditar.Designer.cs">
+      <DependentUpon>frmPersonagemEditar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +200,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frmFilmesEditar.resx">
       <DependentUpon>frmFilmesEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frmPersonagem.resx">
+      <DependentUpon>frmPersonagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frmPersonagemAdicionar.resx">
+      <DependentUpon>frmPersonagemAdicionar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
