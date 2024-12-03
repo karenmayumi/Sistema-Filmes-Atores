@@ -36,14 +36,25 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label5 = new System.Windows.Forms.Label();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.txtCategoria = new System.Windows.Forms.TextBox();
-            this.numDuracao = new System.Windows.Forms.NumericUpDown();
+            this.numSegundosTotais = new System.Windows.Forms.NumericUpDown();
             this.numIdade = new System.Windows.Forms.NumericUpDown();
             this.rtxtSinopse = new System.Windows.Forms.RichTextBox();
             this.btnAddFilme = new System.Windows.Forms.Button();
             this.txtVlrDiaria = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numDuracao)).BeginInit();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numHoras = new System.Windows.Forms.NumericUpDown();
+            this.numMinutos = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.numSegundos = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numSegundosTotais)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numIdade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHoras)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMinutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSegundos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -67,11 +78,12 @@ namespace Sistema_Filmes_Atores.Formulários
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 173);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(30, 225);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 13);
+            this.label3.Size = new System.Drawing.Size(65, 18);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Duração(em segundos)";
+            this.label3.Text = "Duração";
             // 
             // label4
             // 
@@ -85,7 +97,7 @@ namespace Sistema_Filmes_Atores.Formulários
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(30, 236);
+            this.label5.Location = new System.Drawing.Point(30, 173);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(137, 13);
             this.label5.TabIndex = 4;
@@ -105,16 +117,23 @@ namespace Sistema_Filmes_Atores.Formulários
             this.txtCategoria.Size = new System.Drawing.Size(163, 20);
             this.txtCategoria.TabIndex = 7;
             // 
-            // numDuracao
+            // numSegundosTotais
             // 
-            this.numDuracao.Location = new System.Drawing.Point(33, 197);
-            this.numDuracao.Name = "numDuracao";
-            this.numDuracao.Size = new System.Drawing.Size(134, 20);
-            this.numDuracao.TabIndex = 9;
+            this.numSegundosTotais.Location = new System.Drawing.Point(33, 249);
+            this.numSegundosTotais.Maximum = new decimal(new int[] {
+            216000,
+            0,
+            0,
+            0});
+            this.numSegundosTotais.Name = "numSegundosTotais";
+            this.numSegundosTotais.Size = new System.Drawing.Size(134, 20);
+            this.numSegundosTotais.TabIndex = 9;
+            this.numSegundosTotais.ValueChanged += new System.EventHandler(this.numSegundosTotais_ValueChanged);
+            this.numSegundosTotais.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numSegundosTotais_KeyDown);
             // 
             // numIdade
             // 
-            this.numIdade.Location = new System.Drawing.Point(33, 252);
+            this.numIdade.Location = new System.Drawing.Point(33, 189);
             this.numIdade.Name = "numIdade";
             this.numIdade.Size = new System.Drawing.Size(134, 20);
             this.numIdade.TabIndex = 10;
@@ -129,7 +148,7 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             // btnAddFilme
             // 
-            this.btnAddFilme.Location = new System.Drawing.Point(33, 311);
+            this.btnAddFilme.Location = new System.Drawing.Point(33, 345);
             this.btnAddFilme.Name = "btnAddFilme";
             this.btnAddFilme.Size = new System.Drawing.Size(371, 23);
             this.btnAddFilme.TabIndex = 14;
@@ -153,17 +172,111 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label6.TabIndex = 15;
             this.label6.Text = "Valor da diária";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(30, 282);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Horas";
+            // 
+            // numHoras
+            // 
+            this.numHoras.Location = new System.Drawing.Point(33, 298);
+            this.numHoras.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.numHoras.Name = "numHoras";
+            this.numHoras.Size = new System.Drawing.Size(89, 20);
+            this.numHoras.TabIndex = 18;
+            this.numHoras.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numHoras_KeyDown);
+            // 
+            // numMinutos
+            // 
+            this.numMinutos.Location = new System.Drawing.Point(170, 298);
+            this.numMinutos.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.numMinutos.Name = "numMinutos";
+            this.numMinutos.Size = new System.Drawing.Size(89, 20);
+            this.numMinutos.TabIndex = 20;
+            this.numMinutos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numMinutos_KeyDown);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(167, 282);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Minutos";
+            // 
+            // numSegundos
+            // 
+            this.numSegundos.Location = new System.Drawing.Point(315, 298);
+            this.numSegundos.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.numSegundos.Name = "numSegundos";
+            this.numSegundos.Size = new System.Drawing.Size(89, 20);
+            this.numSegundos.TabIndex = 22;
+            this.numSegundos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numSegundos_KeyDown);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(312, 282);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(55, 13);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Segundos";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(139, 287);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(22, 31);
+            this.label10.TabIndex = 23;
+            this.label10.Text = ":";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(275, 287);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(22, 31);
+            this.label11.TabIndex = 24;
+            this.label11.Text = ":";
+            // 
             // frmFilmesAdicionar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 380);
+            this.ClientSize = new System.Drawing.Size(442, 394);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.numSegundos);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.numMinutos);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.numHoras);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.txtVlrDiaria);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnAddFilme);
             this.Controls.Add(this.rtxtSinopse);
             this.Controls.Add(this.numIdade);
-            this.Controls.Add(this.numDuracao);
+            this.Controls.Add(this.numSegundosTotais);
             this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.label5);
@@ -173,8 +286,11 @@ namespace Sistema_Filmes_Atores.Formulários
             this.Controls.Add(this.label1);
             this.Name = "frmFilmesAdicionar";
             this.Text = "Adicionar Filme";
-            ((System.ComponentModel.ISupportInitialize)(this.numDuracao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSegundosTotais)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numIdade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHoras)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMinutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSegundos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,11 +305,19 @@ namespace Sistema_Filmes_Atores.Formulários
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.TextBox txtCategoria;
-        private System.Windows.Forms.NumericUpDown numDuracao;
+        private System.Windows.Forms.NumericUpDown numSegundosTotais;
         private System.Windows.Forms.NumericUpDown numIdade;
         private System.Windows.Forms.RichTextBox rtxtSinopse;
         private System.Windows.Forms.Button btnAddFilme;
         private System.Windows.Forms.TextBox txtVlrDiaria;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown numHoras;
+        private System.Windows.Forms.NumericUpDown numMinutos;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.NumericUpDown numSegundos;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }

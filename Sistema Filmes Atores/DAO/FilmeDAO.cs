@@ -176,5 +176,19 @@ namespace Sistema_Filmes_Atores.DAO
             Conexao.Close();
             return f;
         }
+        public int HoraCompostaParaSegundos(int[] tempo)
+        {
+            int segundosTotais = (tempo[0] * 360) + (tempo[1] * 60) + (tempo[2] * 1);
+            return segundosTotais;
+        }
+        public int[] SegundosParaHoraComposta(int totalSegundos)
+        {
+            int horas = Convert.ToInt32(totalSegundos / 3600);
+            int minutos = Convert.ToInt32((totalSegundos % 3600) / 60);
+            int segundos = totalSegundos % 60;
+            Console.WriteLine($"Hora composta: {horas:00}:{minutos:00}:{segundos:00}");
+            int[] HoraComposta = new int[] { horas, minutos, segundos };
+            return HoraComposta;
+        }
     }
 }

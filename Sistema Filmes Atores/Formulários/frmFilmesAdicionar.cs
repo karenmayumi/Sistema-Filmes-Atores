@@ -14,6 +14,7 @@ namespace Sistema_Filmes_Atores.Formulários
 {
     public partial class frmFilmesAdicionar : Form
     {
+        FilmeDAO dao = new FilmeDAO();
         public frmFilmesAdicionar()
         {
             InitializeComponent();
@@ -24,12 +25,10 @@ namespace Sistema_Filmes_Atores.Formulários
             FilmeEntidade filme = new FilmeEntidade();
             filme.Titulo = txtTitulo.Text;
             filme.Categoria = txtCategoria.Text;
-            filme.Duracao = Convert.ToInt32(numDuracao.Value);
+            filme.Duracao = Convert.ToInt32(numSegundosTotais.Value);
             filme.IdadeIndicada = Convert.ToInt32(numIdade.Value);
             filme.Vlr_Diaria = (float)Convert.ToDecimal(txtVlrDiaria.Text);
             filme.Sinopse = rtxtSinopse.Text;
-
-            FilmeDAO dao = new FilmeDAO();
 
 
             int resposta = dao.Inserir(filme);
@@ -43,6 +42,52 @@ namespace Sistema_Filmes_Atores.Formulários
             {
                 MessageBox.Show("Erro ao atualizar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void numSegundosTotais_ValueChanged(object sender, EventArgs e)
+        {
+            decimal[] tempoDecimal = new decimal[] { numHoras.Value, numMinutos.Value, numSegundos.Value, numSegundosTotais.Value };
+            int[] tempoInteiro = tempoDecimal.Select(d => (int)d).ToArray();
+
+            int[] tempoComposto = dao.SegundosParaHoraComposta(Convert.ToInt32(numSegundosTotais.Value));
+            numHoras.Value = tempoComposto[0];
+            numMinutos.Value = tempoComposto[1];
+            numSegundos.Value = tempoComposto[2];
+        }
+
+        private void numSegundosTotais_KeyDown(object sender, KeyEventArgs e)
+        {
+            decimal[] tempoDecimal = new decimal[] { numHoras.Value, numMinutos.Value, numSegundos.Value, numSegundosTotais.Value };
+            int[] tempoInteiro = tempoDecimal.Select(d => (int)d).ToArray();
+
+            int[] tempoComposto = dao.SegundosParaHoraComposta(Convert.ToInt32(numSegundosTotais.Value));
+            numHoras.Value = tempoComposto[0];
+            numMinutos.Value = tempoComposto[1];
+            numSegundos.Value = tempoComposto[2];
+        }
+
+        private void numSegundos_KeyDown(object sender, KeyEventArgs e)
+        {
+            decimal[] tempoDecimal = new decimal[] { numHoras.Value, numMinutos.Value, numSegundos.Value, numSegundosTotais.Value };
+            int[] tempoInteiro = tempoDecimal.Select(d => (int)d).ToArray();
+
+            numSegundosTotais.Value = dao.HoraCompostaParaSegundos(tempoInteiro);
+        }
+
+        private void numMinutos_KeyDown(object sender, KeyEventArgs e)
+        {
+            decimal[] tempoDecimal = new decimal[] { numHoras.Value, numMinutos.Value, numSegundos.Value, numSegundosTotais.Value };
+            int[] tempoInteiro = tempoDecimal.Select(d => (int)d).ToArray();
+
+            numSegundosTotais.Value = dao.HoraCompostaParaSegundos(tempoInteiro);
+        }
+
+        private void numHoras_KeyDown(object sender, KeyEventArgs e)
+        {
+            decimal[] tempoDecimal = new decimal[] { numHoras.Value, numMinutos.Value, numSegundos.Value, numSegundosTotais.Value };
+            int[] tempoInteiro = tempoDecimal.Select(d => (int)d).ToArray();
+
+            numSegundosTotais.Value = dao.HoraCompostaParaSegundos(tempoInteiro);
         }
     }
 }
