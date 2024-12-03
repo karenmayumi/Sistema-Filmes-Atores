@@ -178,7 +178,7 @@ namespace Sistema_Filmes_Atores.DAO
         }
         public int HoraCompostaParaSegundos(int[] tempo)
         {
-            int segundosTotais = (tempo[0] * 360) + (tempo[1] * 60) + (tempo[2] * 1);
+            int segundosTotais = (tempo[0] * 3600) + (tempo[1] * 60) + (tempo[2] * 1);
             return segundosTotais;
         }
         public int[] SegundosParaHoraComposta(int totalSegundos)

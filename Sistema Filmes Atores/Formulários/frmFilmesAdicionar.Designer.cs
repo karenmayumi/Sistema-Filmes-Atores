@@ -40,7 +40,6 @@ namespace Sistema_Filmes_Atores.Formulários
             this.numIdade = new System.Windows.Forms.NumericUpDown();
             this.rtxtSinopse = new System.Windows.Forms.RichTextBox();
             this.btnAddFilme = new System.Windows.Forms.Button();
-            this.txtVlrDiaria = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.numHoras = new System.Windows.Forms.NumericUpDown();
@@ -50,11 +49,13 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.numVlrDiaria = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numSegundosTotais)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numIdade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHoras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMinutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSegundos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numVlrDiaria)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -128,8 +129,8 @@ namespace Sistema_Filmes_Atores.Formulários
             this.numSegundosTotais.Name = "numSegundosTotais";
             this.numSegundosTotais.Size = new System.Drawing.Size(134, 20);
             this.numSegundosTotais.TabIndex = 9;
-            this.numSegundosTotais.ValueChanged += new System.EventHandler(this.numSegundosTotais_ValueChanged);
             this.numSegundosTotais.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numSegundosTotais_KeyDown);
+            this.numSegundosTotais.Leave += new System.EventHandler(this.numSegundosTotais_Leave);
             // 
             // numIdade
             // 
@@ -155,13 +156,6 @@ namespace Sistema_Filmes_Atores.Formulários
             this.btnAddFilme.Text = "Adicionar Filme";
             this.btnAddFilme.UseVisualStyleBackColor = true;
             this.btnAddFilme.Click += new System.EventHandler(this.btnAddFilme_Click);
-            // 
-            // txtVlrDiaria
-            // 
-            this.txtVlrDiaria.Location = new System.Drawing.Point(243, 189);
-            this.txtVlrDiaria.Name = "txtVlrDiaria";
-            this.txtVlrDiaria.Size = new System.Drawing.Size(163, 20);
-            this.txtVlrDiaria.TabIndex = 16;
             // 
             // label6
             // 
@@ -193,6 +187,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.numHoras.Size = new System.Drawing.Size(89, 20);
             this.numHoras.TabIndex = 18;
             this.numHoras.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numHoras_KeyDown);
+            this.numHoras.Leave += new System.EventHandler(this.numHoras_Leave);
             // 
             // numMinutos
             // 
@@ -206,6 +201,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.numMinutos.Size = new System.Drawing.Size(89, 20);
             this.numMinutos.TabIndex = 20;
             this.numMinutos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numMinutos_KeyDown);
+            this.numMinutos.Leave += new System.EventHandler(this.numMinutos_Leave);
             // 
             // label8
             // 
@@ -228,6 +224,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.numSegundos.Size = new System.Drawing.Size(89, 20);
             this.numSegundos.TabIndex = 22;
             this.numSegundos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numSegundos_KeyDown);
+            this.numSegundos.Leave += new System.EventHandler(this.numSegundos_Leave);
             // 
             // label9
             // 
@@ -258,11 +255,19 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label11.TabIndex = 24;
             this.label11.Text = ":";
             // 
+            // numVlrDiaria
+            // 
+            this.numVlrDiaria.Location = new System.Drawing.Point(243, 189);
+            this.numVlrDiaria.Name = "numVlrDiaria";
+            this.numVlrDiaria.Size = new System.Drawing.Size(161, 20);
+            this.numVlrDiaria.TabIndex = 25;
+            // 
             // frmFilmesAdicionar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(442, 394);
+            this.Controls.Add(this.numVlrDiaria);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.numSegundos);
@@ -271,7 +276,6 @@ namespace Sistema_Filmes_Atores.Formulários
             this.Controls.Add(this.label8);
             this.Controls.Add(this.numHoras);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtVlrDiaria);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnAddFilme);
             this.Controls.Add(this.rtxtSinopse);
@@ -291,6 +295,7 @@ namespace Sistema_Filmes_Atores.Formulários
             ((System.ComponentModel.ISupportInitialize)(this.numHoras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMinutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSegundos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numVlrDiaria)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,7 +314,6 @@ namespace Sistema_Filmes_Atores.Formulários
         private System.Windows.Forms.NumericUpDown numIdade;
         private System.Windows.Forms.RichTextBox rtxtSinopse;
         private System.Windows.Forms.Button btnAddFilme;
-        private System.Windows.Forms.TextBox txtVlrDiaria;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown numHoras;
@@ -319,5 +323,6 @@ namespace Sistema_Filmes_Atores.Formulários
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.NumericUpDown numVlrDiaria;
     }
 }
