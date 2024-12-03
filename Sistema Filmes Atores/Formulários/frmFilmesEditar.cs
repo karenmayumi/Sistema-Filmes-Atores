@@ -31,7 +31,7 @@ namespace Sistema_Filmes_Atores.Formulários
             numSegundos.Value = tempo[2];
             numIdade.Value = filme.IdadeIndicada;
             rtxtSinopse.Text = filme.Sinopse;
-            numVlrDiaria.Text = filme.Vlr_Diaria.ToString();
+            numVlrDiaria.Value = filme.Vlr_Diaria;
         }
 
         private void btnEditAtor_Click(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace Sistema_Filmes_Atores.Formulários
             f.Duracao = Convert.ToInt32(numIdade.Value);
             f.IdadeIndicada = Convert.ToInt32(numIdade.Value);
             f.Sinopse = rtxtSinopse.Text;
-            f.Vlr_Diaria= Convert.ToInt32(numVlrDiaria.Text);
+            f.Vlr_Diaria= Convert.ToDecimal(numVlrDiaria.Value);
 
             int resposta = dao.AtualizarFilme(f);
 
@@ -67,7 +67,7 @@ namespace Sistema_Filmes_Atores.Formulários
             filme.Categoria = txtCategoria.Text;
             filme.Duracao = Convert.ToInt32(numSegundosTotais.Value);
             filme.IdadeIndicada = Convert.ToInt32(numIdade.Value);
-            filme.Vlr_Diaria = (float)Convert.ToDecimal(numVlrDiaria.Text);
+            filme.Vlr_Diaria = Convert.ToDecimal(numVlrDiaria.Value);
             filme.Sinopse = rtxtSinopse.Text;
 
             FilmeDAO dao = new FilmeDAO();

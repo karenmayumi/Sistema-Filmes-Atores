@@ -27,7 +27,7 @@ namespace Sistema_Filmes_Atores.Formulários
             filme.Categoria = txtCategoria.Text;
             filme.Duracao = Convert.ToInt32(numSegundosTotais.Value);
             filme.IdadeIndicada = Convert.ToInt32(numIdade.Value);
-            filme.Vlr_Diaria = (float)Convert.ToDecimal(numVlrDiaria.Text);
+            filme.Vlr_Diaria = Convert.ToDecimal(numVlrDiaria.Text);
             filme.Sinopse = rtxtSinopse.Text;
 
 

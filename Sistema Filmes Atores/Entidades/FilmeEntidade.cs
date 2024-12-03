@@ -13,7 +13,7 @@ namespace Sistema_Filmes_Atores.Entidades
         public string Categoria { get; set; }
         public int Duracao { get; set; }
         public int IdadeIndicada { get; set; }
-        public float Vlr_Diaria { get; set; }
+        public Decimal Vlr_Diaria { get; set; }
         public string Sinopse { get; set; }
         public object[] Linha()
         {

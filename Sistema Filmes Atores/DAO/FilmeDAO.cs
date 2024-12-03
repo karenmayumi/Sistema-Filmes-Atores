@@ -91,7 +91,7 @@ namespace Sistema_Filmes_Atores.DAO
                     f.Categoria = Leitura[2].ToString();
                     f.Duracao = Convert.ToInt32(Leitura[3]);
                     f.IdadeIndicada = Convert.ToInt32(Leitura[4]);
-                    f.Vlr_Diaria = (float)Convert.ToDecimal(Leitura[5]);
+                    f.Vlr_Diaria = Convert.ToDecimal(Leitura[5]);
                     f.Sinopse = Leitura[6].ToString();
                     retorno.Rows.Add(f.Linha());
                 }
@@ -170,7 +170,7 @@ namespace Sistema_Filmes_Atores.DAO
                 f.Duracao = resultado.GetInt32(3);
                 f.IdadeIndicada = resultado.GetInt32(4);
                 f.Sinopse = resultado.GetString(5);
-                f.Vlr_Diaria = resultado.GetFloat(6);
+                f.Vlr_Diaria = resultado.GetDecimal(6);
             }
 
             Conexao.Close();

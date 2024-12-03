@@ -257,7 +257,13 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             // numVlrDiaria
             // 
+            this.numVlrDiaria.DecimalPlaces = 2;
             this.numVlrDiaria.Location = new System.Drawing.Point(243, 189);
+            this.numVlrDiaria.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
             this.numVlrDiaria.Name = "numVlrDiaria";
             this.numVlrDiaria.Size = new System.Drawing.Size(161, 20);
             this.numVlrDiaria.TabIndex = 25;
