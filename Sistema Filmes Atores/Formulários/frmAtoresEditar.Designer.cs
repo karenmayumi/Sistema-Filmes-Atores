@@ -146,7 +146,7 @@ namespace Sistema_Filmes_Atores.Formulários
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(71, 28);
+            this.txtId.Location = new System.Drawing.Point(42, 28);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(50, 20);
             this.txtId.TabIndex = 44;
@@ -155,7 +155,7 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(193, 364);
+            this.ClientSize = new System.Drawing.Size(289, 364);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnDeleteAtor);

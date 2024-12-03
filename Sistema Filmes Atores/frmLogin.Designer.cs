@@ -54,7 +54,7 @@ namespace Sistema_Filmes_Atores
             this.btnEntrar.BackColor = System.Drawing.Color.DarkRed;
             this.btnEntrar.Font = new System.Drawing.Font("Microsoft YaHei", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEntrar.Location = new System.Drawing.Point(276, 342);
+            this.btnEntrar.Location = new System.Drawing.Point(291, 346);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(271, 60);
             this.btnEntrar.TabIndex = 15;
@@ -83,11 +83,11 @@ namespace Sistema_Filmes_Atores
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 51F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(298, 75);
+            this.label1.Location = new System.Drawing.Point(305, 77);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(270, 82);
+            this.label1.Size = new System.Drawing.Size(215, 65);
             this.label1.TabIndex = 12;
             this.label1.Text = "LOGIN";
             // 
