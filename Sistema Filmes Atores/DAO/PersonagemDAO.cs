@@ -17,7 +17,7 @@ namespace Sistema_Filmes_Atores.DAO
         {
             Conexao = new MySqlConnection(LinhaConexao);
         }
-        public void Inserir(PersonagemEntidade personagem)
+        public int Inserir(PersonagemEntidade personagem)
         {
             Conexao.Open();
             string query = "Insert into PERSONAGENS (filmeID, atorID, Nome, Papel) Values (@filmeid, @atorid, @nome, @papel) ";
@@ -32,8 +32,9 @@ namespace Sistema_Filmes_Atores.DAO
             comando.Parameters.Add(parametro2);
             comando.Parameters.Add(parametro3);
             comando.Parameters.Add(parametro4);
-            comando.ExecuteNonQuery();
+            int retorno = comando.ExecuteNonQuery();
             Conexao.Close();
+            return retorno;
         }
         public DataTable ObterPersonagem()
         {

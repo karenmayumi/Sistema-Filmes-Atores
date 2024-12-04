@@ -176,6 +176,30 @@ namespace Sistema_Filmes_Atores.DAO
             Conexao.Close();
             return f;
         }
+        public DataTable PreencherComboBox()
+        {
+            DataTable dataTable = new DataTable();
+
+            string query = "SELECT Id, Titulo, Categoria FROM Filmes";
+
+            using (MySqlConnection connection = new MySqlConnection(LinhaConexao))
+            {
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
+
+                try
+                {
+                    // Preenche o DataTable com os dados da consulta
+                    adapter.Fill(dataTable);
+                }
+                catch (Exception ex)
+                {
+                    // Lida com erros, se necessário
+                    throw new Exception("Erro ao acessar os dados: " + ex.Message);
+                }
+            }
+
+            return dataTable;
+        }
         public int HoraCompostaParaSegundos(int[] tempo)
         {
             int segundosTotais = (tempo[0] * 3600) + (tempo[1] * 60) + (tempo[2] * 1);

@@ -15,8 +15,18 @@ namespace Sistema_Filmes_Atores.Formulários
     public partial class frmPersonagem : Form
     {
         DataTable dados;
-        PersonagemDAO dao = new PersonagemDAO();
+        AtorDAO atorDao = new AtorDAO();
+        FilmeDAO filmeDao = new FilmeDAO();
+        PersonagemDAO personagemDao = new PersonagemDAO();
         int LinhaSelecionada;
+        private void AtualizarGridAtor(DataTable dados)
+        {
+            dtAtor.DataSource = dados;
+        }
+        private void AtualizarGridFilme(DataTable dados)
+        {
+            dtFilme.DataSource = dados;
+        }
         public frmPersonagem()
         {
             InitializeComponent();
@@ -27,27 +37,69 @@ namespace Sistema_Filmes_Atores.Formulários
                 dados.Columns.Add(atributos.Name);
             }
 
-            dados = dao.ObterPersonagem();
+            dados = personagemDao.ObterPersonagem();
             dtPersonagens.DataSource = dados;
+
+            AtualizarGridAtor(atorDao.ObterAtores());
+            AtualizarGridFilme(filmeDao.ObterFilmes());
         }
 
         private void btnPersonagemAdd_Click(object sender, EventArgs e)
         {
 
-            frmPersonagemAdicionar addPersonagem = new frmPersonagemAdicionar();
-            //Inscreve-se no evento
-            addPersonagem.FormClosed += frmPersonagem_FormClosed;
-            addPersonagem.ShowDialog();
+            //frmPersonagemAdicionar addPersonagem = new frmPersonagemAdicionar();
+            ////Inscreve-se no evento
+            //addPersonagem.FormClosed += frmPersonagem_FormClosed;
+            //addPersonagem.ShowDialog();
+
+
+
+            // ----------------------------------------------------
+            // encontrar maneira de adicionar id no objeto e mostrar nome no txt com ator e com filme
+            // deixar txt disabled
+            // adicionar acao de ao dar enter ou clicar, adicionar/mudar lá no txt
+            // ----------------------------------------------------
+
+
+
+            //PersonagemEntidade personagem = new PersonagemEntidade();
+            //personagem.atorID = txtAtor.Text;
+            //personagem.filmeID = Convert.ToInt32(txtFilme.SelectedValue);
+            //personagem.Nome = txtNomePersonagem.Text;
+            //personagem.Papel = txtPapel.Text;
+
+
+            int resposta = personagemDao.Inserir(personagem);
+
+            if (resposta == 1)
+            {
+                MessageBox.Show("Personagem adicionado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Erro ao adicionar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void frmPersonagem_FormClosed(object sender, FormClosedEventArgs e)
         {
-            dtPersonagens.DataSource = dao.ObterPersonagem();
+            dtPersonagens.DataSource = personagemDao.ObterPersonagem();
             LinhaSelecionada = 0;
         }
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
-            dtPersonagens.DataSource = dao.PesquisarPersonagens(txtPesquisa.Text);
+            dtPersonagens.DataSource = personagemDao.PesquisarPersonagens(txtPesquisa.Text);
+        }
+
+        private void txtPesqAtor_TextChanged(object sender, EventArgs e)
+        {
+            dtAtor.DataSource = atorDao.PesquisarAtores(txtPesqAtor.Text);
+        }
+
+        private void txtPesqFilme_TextChanged(object sender, EventArgs e)
+        {
+            dtFilme.DataSource = filmeDao.PesquisarFilmes(txtPesqFilme.Text);
         }
     }
 }

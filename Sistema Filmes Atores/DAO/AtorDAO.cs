@@ -66,9 +66,9 @@ namespace Sistema_Filmes_Atores.DAO
 
             string query = "SELECT Id, Nome, Nomeartistico FROM Atores";
 
-            using (SqlConnection connection = new SqlConnection(LinhaConexao))
+            using (MySqlConnection connection = new MySqlConnection(LinhaConexao))
             {
-                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
 
                 try
                 {
