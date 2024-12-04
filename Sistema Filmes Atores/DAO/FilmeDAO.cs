@@ -134,7 +134,7 @@ namespace Sistema_Filmes_Atores.DAO
                 retorno.Columns.Add(atributos.Name);
             }
 
-            if (Leitura.HasRows) //terminar aqui
+            if (Leitura.HasRows)
             {
                 while (Leitura.Read())
                 {

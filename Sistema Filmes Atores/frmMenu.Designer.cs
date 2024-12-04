@@ -31,6 +31,7 @@ namespace Sistema_Filmes_Atores
         {
             this.btnFilmes = new System.Windows.Forms.Button();
             this.btnAtores = new System.Windows.Forms.Button();
+            this.btnPersonagens = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnFilmes
@@ -53,11 +54,22 @@ namespace Sistema_Filmes_Atores
             this.btnAtores.UseVisualStyleBackColor = true;
             this.btnAtores.Click += new System.EventHandler(this.btnAtores_Click);
             // 
+            // btnPersonagens
+            // 
+            this.btnPersonagens.Location = new System.Drawing.Point(79, 242);
+            this.btnPersonagens.Name = "btnPersonagens";
+            this.btnPersonagens.Size = new System.Drawing.Size(169, 48);
+            this.btnPersonagens.TabIndex = 2;
+            this.btnPersonagens.Text = "Ver personagens";
+            this.btnPersonagens.UseVisualStyleBackColor = true;
+            this.btnPersonagens.Click += new System.EventHandler(this.btnPersonagens_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(332, 352);
+            this.Controls.Add(this.btnPersonagens);
             this.Controls.Add(this.btnAtores);
             this.Controls.Add(this.btnFilmes);
             this.Name = "frmMenu";
@@ -70,5 +82,6 @@ namespace Sistema_Filmes_Atores
 
         private System.Windows.Forms.Button btnFilmes;
         private System.Windows.Forms.Button btnAtores;
+        private System.Windows.Forms.Button btnPersonagens;
     }
 }

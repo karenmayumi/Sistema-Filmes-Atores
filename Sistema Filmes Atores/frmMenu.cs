@@ -29,5 +29,11 @@ namespace Sistema_Filmes_Atores
             frmAtores atores = new frmAtores();
             atores.Show();
         }
+
+        private void btnPersonagens_Click(object sender, EventArgs e)
+        {
+            frmPersonagem personagem = new frmPersonagem();
+            personagem.Show();
+        }
     }
 }

@@ -44,6 +44,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.btnPersonagemAdd.TabIndex = 7;
             this.btnPersonagemAdd.Text = "Adicionar Personagem";
             this.btnPersonagemAdd.UseVisualStyleBackColor = true;
+            this.btnPersonagemAdd.Click += new System.EventHandler(this.btnPersonagemAdd_Click);
             // 
             // dtPersonagens
             // 
@@ -68,6 +69,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(277, 20);
             this.txtPesquisa.TabIndex = 4;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // frmPersonagem
             // 

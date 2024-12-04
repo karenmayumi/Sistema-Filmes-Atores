@@ -11,11 +11,17 @@ namespace Sistema_Filmes_Atores.Entidades
         public int personagemID { get; set; }
         public int filmeID { get; set; }
         public int atorID { get; set; }
+        public string tituloFilme{ get; set; }
+        public string nomeAtor{ get; set; }
         public string Nome { get; set; }
         public string Papel { get; set; }
         public object[] Linha()
         {
             return new object[] { personagemID, filmeID, atorID, Nome, Papel };
+        }
+        public object[] LinhaLegivel()
+        {
+            return new object[] { personagemID, tituloFilme, nomeAtor, Nome, Papel };
         }
     }
 }
