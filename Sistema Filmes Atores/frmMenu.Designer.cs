@@ -83,16 +83,6 @@ namespace Sistema_Filmes_Atores
             this.label1.TabIndex = 8;
             this.label1.Text = "Menu ";
             // 
-            // btnPersonagens
-            // 
-            this.btnPersonagens.Location = new System.Drawing.Point(79, 242);
-            this.btnPersonagens.Name = "btnPersonagens";
-            this.btnPersonagens.Size = new System.Drawing.Size(169, 48);
-            this.btnPersonagens.TabIndex = 2;
-            this.btnPersonagens.Text = "Ver personagens";
-            this.btnPersonagens.UseVisualStyleBackColor = true;
-            this.btnPersonagens.Click += new System.EventHandler(this.btnPersonagens_Click);
-            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
