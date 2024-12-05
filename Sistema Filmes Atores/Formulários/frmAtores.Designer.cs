@@ -47,9 +47,9 @@ namespace Sistema_Filmes_Atores.Formulários
             this.btnAtorAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAtorAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtorAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnAtorAdd.Location = new System.Drawing.Point(447, 114);
+            this.btnAtorAdd.Location = new System.Drawing.Point(310, 442);
             this.btnAtorAdd.Name = "btnAtorAdd";
-            this.btnAtorAdd.Size = new System.Drawing.Size(147, 20);
+            this.btnAtorAdd.Size = new System.Drawing.Size(181, 31);
             this.btnAtorAdd.TabIndex = 5;
             this.btnAtorAdd.Text = "Adicionar Ator/Atriz";
             this.btnAtorAdd.UseVisualStyleBackColor = false;
@@ -59,9 +59,9 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             this.dtAtores.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dtAtores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtAtores.Location = new System.Drawing.Point(51, 155);
+            this.dtAtores.Location = new System.Drawing.Point(58, 119);
             this.dtAtores.Name = "dtAtores";
-            this.dtAtores.Size = new System.Drawing.Size(543, 256);
+            this.dtAtores.Size = new System.Drawing.Size(667, 294);
             this.dtAtores.TabIndex = 8;
             this.dtAtores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtAtores_CellClick);
             this.dtAtores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtAtores_CellDoubleClick);
@@ -72,7 +72,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(47, 114);
+            this.label1.Location = new System.Drawing.Point(64, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 24);
             this.label1.TabIndex = 7;
@@ -80,7 +80,7 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             // txtPesquisar
             // 
-            this.txtPesquisar.Location = new System.Drawing.Point(154, 114);
+            this.txtPesquisar.Location = new System.Drawing.Point(171, 83);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(287, 20);
             this.txtPesquisar.TabIndex = 6;
@@ -92,7 +92,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.label2.Location = new System.Drawing.Point(278, 35);
+            this.label2.Location = new System.Drawing.Point(603, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 39);
             this.label2.TabIndex = 9;
@@ -102,7 +102,7 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             this.pictureBox1.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources.iconeator;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(219, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(636, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(53, 47);
             this.pictureBox1.TabIndex = 10;
@@ -114,7 +114,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(642, 423);
+            this.ClientSize = new System.Drawing.Size(775, 496);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtAtores);
