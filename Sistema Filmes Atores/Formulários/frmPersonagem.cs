@@ -18,7 +18,9 @@ namespace Sistema_Filmes_Atores.Formulários
         AtorDAO atorDao = new AtorDAO();
         FilmeDAO filmeDao = new FilmeDAO();
         PersonagemDAO personagemDao = new PersonagemDAO();
-        int LinhaSelecionada;
+        int LinhaSelecionadaP;
+        int LinhaSelecionadaA;
+        int LinhaSelecionadaF;
         private void AtualizarGridAtor(DataTable dados)
         {
             dtAtor.DataSource = dados;
@@ -37,7 +39,7 @@ namespace Sistema_Filmes_Atores.Formulários
                 dados.Columns.Add(atributos.Name);
             }
 
-            dados = personagemDao.ObterPersonagem();
+            dados = personagemDao.ObterPersonagem(); 
             dtPersonagens.DataSource = dados;
 
             AtualizarGridAtor(atorDao.ObterAtores());
@@ -69,24 +71,18 @@ namespace Sistema_Filmes_Atores.Formulários
             //personagem.Papel = txtPapel.Text;
 
 
-            int resposta = personagemDao.Inserir(personagem);
+            //int resposta = personagemDao.Inserir(personagem);
 
-            if (resposta == 1)
-            {
-                MessageBox.Show("Personagem adicionado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Erro ao adicionar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //if (resposta == 1)
+            //{
+            //    MessageBox.Show("Personagem adicionado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    this.Close();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Erro ao adicionar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
-        private void frmPersonagem_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            dtPersonagens.DataSource = personagemDao.ObterPersonagem();
-            LinhaSelecionada = 0;
-        }
-
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
             dtPersonagens.DataSource = personagemDao.PesquisarPersonagens(txtPesquisa.Text);
@@ -100,6 +96,30 @@ namespace Sistema_Filmes_Atores.Formulários
         private void txtPesqFilme_TextChanged(object sender, EventArgs e)
         {
             dtFilme.DataSource = filmeDao.PesquisarFilmes(txtPesqFilme.Text);
+        }
+
+        private void btnAddAtor_Click(object sender, EventArgs e)
+        {
+            txtIdAtor.Text = dtAtor.Rows[LinhaSelecionadaA].Cells[0].Value.ToString();
+
+            txtAtor.Text = dtAtor.Rows[LinhaSelecionadaA].Cells[1].Value.ToString();
+        }
+
+        private void dtAtor_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            LinhaSelecionadaA = e.RowIndex;
+        }
+
+        private void btnAddFilme_Click(object sender, EventArgs e)
+        {
+            txtIdFilme.Text = dtFilme.Rows[LinhaSelecionadaF].Cells[0].Value.ToString();
+
+            txtFilme.Text = dtFilme.Rows[LinhaSelecionadaF].Cells[1].Value.ToString();
+        }
+
+        private void dtFilme_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            LinhaSelecionadaF = e.RowIndex;
         }
     }
 }

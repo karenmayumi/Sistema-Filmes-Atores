@@ -21,7 +21,7 @@ namespace Sistema_Filmes_Atores.Entidades
         }
         public object[] LinhaLegivel()
         {
-            return new object[] { personagemID, tituloFilme, nomeAtor, Nome, Papel };
+            return new object[] { personagemID, Nome, Papel, tituloFilme, nomeAtor };
         }
     }
 }

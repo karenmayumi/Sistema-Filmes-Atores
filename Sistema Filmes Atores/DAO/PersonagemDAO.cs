@@ -1,4 +1,5 @@
-﻿using MySqlConnector;
+﻿//using MySql.Data.MySqlClient;
+using MySqlConnector;
 using Sistema_Filmes_Atores.Entidades;
 using System;
 using System.Collections.Generic;
@@ -41,7 +42,7 @@ namespace Sistema_Filmes_Atores.DAO
             DataTable dt = new DataTable();
             Conexao.Open();
             //string query = "SELECT c.Nome, d.Nome  FROM curso as c INNER JOIN disciplina as d in id.d = id.c  Order by c.Id desc";
-            string query = @"SELECT P.personagemid, F.titulo, A.nome, P.nome, P.papel FROM Personagens as P 
+            string query = @"SELECT P.personagemid, P.nome, P.papel, F.titulo, A.nome FROM Personagens as P 
                             INNER JOIN ATORES as A ON A.Id = P.atorid
                             INNER JOIN FILMES as F ON F.Id = P.filmeid
                             Order by P.personagemId desc; ";
@@ -49,17 +50,11 @@ namespace Sistema_Filmes_Atores.DAO
             MySqlCommand comando = new MySqlCommand(query, Conexao);
             MySqlDataReader Leitura = comando.ExecuteReader();
 
-            //dt.Columns.Add("personagemID");
-            //dt.Columns.Add("filmeID");
-            //dt.Columns.Add("atorID");
-            //dt.Columns.Add("Nome do Personagem");
-            //dt.Columns.Add("Papel");
-
             dt.Columns.Add("personagemID");
-            dt.Columns.Add("Nome do Filme");
-            dt.Columns.Add("Nome do Ator");
             dt.Columns.Add("Nome do Personagem");
             dt.Columns.Add("Papel");
+            dt.Columns.Add("Nome do Filme");
+            dt.Columns.Add("Nome do Ator");
 
             if (Leitura.HasRows)
             {
@@ -67,10 +62,10 @@ namespace Sistema_Filmes_Atores.DAO
                 {
                     PersonagemEntidade p = new PersonagemEntidade();
                     p.personagemID = Convert.ToInt32(Leitura[0]);
-                    p.tituloFilme = Leitura[1].ToString();
-                    p.nomeAtor = Leitura[2].ToString();
-                    p.Nome = Leitura[3].ToString();
-                    p.Papel = Leitura[4].ToString();
+                    p.Nome = Leitura[1].ToString();
+                    p.Papel = Leitura[2].ToString();
+                    p.tituloFilme = Leitura[3].ToString();
+                    p.nomeAtor = Leitura[4].ToString();
                     dt.Rows.Add(p.LinhaLegivel());
                 }
             }
@@ -84,7 +79,7 @@ namespace Sistema_Filmes_Atores.DAO
             string Query = "";
             if (string.IsNullOrEmpty(search))
             {
-                Query = @"SELECT P.personagemid, F.titulo, A.nome, P.nome, P.papel FROM Personagens as P 
+                Query = @"SELECT P.personagemid, P.nome, F.titulo, A.nome, P.papel FROM Personagens as P 
                             INNER JOIN ATORES as A ON A.Id = P.atorid
                             INNER JOIN FILMES as F ON F.Id = P.filmeid
                             Order by P.personagemId desc; ";
@@ -92,7 +87,7 @@ namespace Sistema_Filmes_Atores.DAO
             else
             {
                 Query = @"
-                        SELECT P.personagemid, F.titulo, A.nome, P.nome, P.papel 
+                        SELECT P.personagemid, P.nome, F.titulo, A.nome, P.papel 
                         FROM Personagens as P
                         INNER JOIN ATORES as A ON A.Id = P.atorid
                         INNER JOIN FILMES as F ON F.Id = P.filmeid
@@ -107,9 +102,9 @@ namespace Sistema_Filmes_Atores.DAO
             MySqlDataReader Leitura = Comando.ExecuteReader();
 
             dt.Columns.Add("personagemID");
+            dt.Columns.Add("Nome do Personagem");
             dt.Columns.Add("Nome do Filme");
             dt.Columns.Add("Nome do Ator");
-            dt.Columns.Add("Nome do Personagem");
             dt.Columns.Add("Papel");
 
             if (Leitura.HasRows)
@@ -118,9 +113,9 @@ namespace Sistema_Filmes_Atores.DAO
                 {
                     PersonagemEntidade p = new PersonagemEntidade();
                     p.personagemID = Convert.ToInt32(Leitura[0]);
-                    p.tituloFilme = Leitura[1].ToString();
-                    p.nomeAtor = Leitura[2].ToString();
-                    p.Nome = Leitura[3].ToString();
+                    p.Nome = Leitura[1].ToString();
+                    p.tituloFilme = Leitura[2].ToString();
+                    p.nomeAtor = Leitura[3].ToString();
                     p.Papel = Leitura[4].ToString();
                     dt.Rows.Add(p.LinhaLegivel());
                 }
