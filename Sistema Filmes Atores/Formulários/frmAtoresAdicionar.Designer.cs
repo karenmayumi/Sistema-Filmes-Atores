@@ -43,7 +43,7 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             // btnAddAtor
             // 
-            this.btnAddAtor.Location = new System.Drawing.Point(27, 260);
+            this.btnAddAtor.Location = new System.Drawing.Point(27, 238);
             this.btnAddAtor.Name = "btnAddAtor";
             this.btnAddAtor.Size = new System.Drawing.Size(163, 23);
             this.btnAddAtor.TabIndex = 27;
@@ -82,6 +82,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 15;
             this.label1.Text = "Nome";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cbxGenero
             // 
@@ -124,7 +125,9 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(222, 325);
+            this.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources.Fotos_Divertida_Mente_2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(287, 377);
             this.Controls.Add(this.txtNomeArtistico);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
