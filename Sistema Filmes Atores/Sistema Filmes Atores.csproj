@@ -279,5 +279,8 @@
   <ItemGroup>
     <None Include="Resources\iconeator.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TelaMenu02.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

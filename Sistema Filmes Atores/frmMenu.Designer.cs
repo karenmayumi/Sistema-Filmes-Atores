@@ -38,18 +38,19 @@ namespace Sistema_Filmes_Atores
             // 
             // btnAtores
             // 
+            this.btnAtores.BackColor = System.Drawing.Color.Snow;
             this.btnAtores.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtores.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAtores.Location = new System.Drawing.Point(62, 198);
+            this.btnAtores.Location = new System.Drawing.Point(62, 189);
             this.btnAtores.Name = "btnAtores";
             this.btnAtores.Size = new System.Drawing.Size(190, 50);
             this.btnAtores.TabIndex = 6;
             this.btnAtores.Text = "Ver atores";
-            this.btnAtores.UseVisualStyleBackColor = true;
+            this.btnAtores.UseVisualStyleBackColor = false;
             // 
             // btnFilmes
             // 
-            this.btnFilmes.BackColor = System.Drawing.Color.Transparent;
+            this.btnFilmes.BackColor = System.Drawing.Color.Snow;
             this.btnFilmes.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFilmes.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnFilmes.Location = new System.Drawing.Point(62, 124);
@@ -64,10 +65,9 @@ namespace Sistema_Filmes_Atores
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources.Logo_Locadora_removebg_preview__1_;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(75, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(72, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(190, 41);
+            this.pictureBox1.Size = new System.Drawing.Size(190, 36);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -87,9 +87,10 @@ namespace Sistema_Filmes_Atores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources.Design_sem_nome__1_;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources.TelaMenu02;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(314, 355);
+            this.ClientSize = new System.Drawing.Size(316, 378);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAtores);
