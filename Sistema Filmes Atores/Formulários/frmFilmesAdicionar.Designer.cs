@@ -169,15 +169,16 @@ namespace Sistema_Filmes_Atores.Formulários
             // btnAddFilme
             // 
             this.btnAddFilme.BackColor = System.Drawing.Color.Firebrick;
+            this.btnAddFilme.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
             this.btnAddFilme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddFilme.ForeColor = System.Drawing.SystemColors.Window;
             this.btnAddFilme.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddFilme.ImageKey = "filmeicon.png";
             this.btnAddFilme.ImageList = this.imageList1;
-            this.btnAddFilme.Location = new System.Drawing.Point(93, 465);
+            this.btnAddFilme.Location = new System.Drawing.Point(89, 467);
             this.btnAddFilme.Name = "btnAddFilme";
-            this.btnAddFilme.Size = new System.Drawing.Size(167, 37);
+            this.btnAddFilme.Size = new System.Drawing.Size(175, 41);
             this.btnAddFilme.TabIndex = 14;
             this.btnAddFilme.Text = "Adicionar Filme";
             this.btnAddFilme.UseVisualStyleBackColor = false;

@@ -74,7 +74,7 @@ namespace Sistema_Filmes_Atores
             // btnFilmeAdd
             // 
             this.btnFilmeAdd.BackColor = System.Drawing.Color.Firebrick;
-            this.btnFilmeAdd.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFilmeAdd.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btnFilmeAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFilmeAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFilmeAdd.ForeColor = System.Drawing.SystemColors.Window;

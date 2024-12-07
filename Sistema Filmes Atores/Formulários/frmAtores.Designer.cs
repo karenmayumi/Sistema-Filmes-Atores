@@ -47,7 +47,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.btnAtorAdd.AutoEllipsis = true;
             this.btnAtorAdd.BackColor = System.Drawing.Color.Firebrick;
             this.btnAtorAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAtorAdd.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAtorAdd.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
             this.btnAtorAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtorAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtorAdd.ForeColor = System.Drawing.Color.WhiteSmoke;

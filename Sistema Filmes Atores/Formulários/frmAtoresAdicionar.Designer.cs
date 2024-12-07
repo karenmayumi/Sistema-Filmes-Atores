@@ -45,7 +45,7 @@ namespace Sistema_Filmes_Atores.Formulários
             // btnAddAtor
             // 
             this.btnAddAtor.BackColor = System.Drawing.SystemColors.Window;
-            this.btnAddAtor.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAddAtor.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
             this.btnAddAtor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddAtor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAtor.ForeColor = System.Drawing.Color.Brown;

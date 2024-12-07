@@ -412,5 +412,11 @@
   <ItemGroup>
     <None Include="Resources\Sistema de Locadora %284%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telapersonagens.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telapersonagensultima.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

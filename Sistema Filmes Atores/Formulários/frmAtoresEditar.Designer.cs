@@ -133,6 +133,7 @@ namespace Sistema_Filmes_Atores.Formulários
             // btnDeleteAtor
             // 
             this.btnDeleteAtor.BackColor = System.Drawing.SystemColors.Window;
+            this.btnDeleteAtor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteAtor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteAtor.ForeColor = System.Drawing.Color.DarkRed;
             this.btnDeleteAtor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
