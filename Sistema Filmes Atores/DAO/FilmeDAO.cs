@@ -71,7 +71,7 @@ namespace Sistema_Filmes_Atores.DAO
         {
             DataTable retorno = new DataTable();
             Conexao.Open();
-            string query = "SELECT ID, TITULO, CATEGORIA, DURACAO, IDADEINDICADA, VLR_DIARIA, SINOPSE FROM FILMES ORDER BY ID DESC";
+            string query = "SELECT ID, TITULO, CATEGORIA, DURACAO, IDADEINDICADA, VLR_DIARIA, SINOPSE FROM FILMES ORDER BY TITULO, ID DESC";
             MySqlCommand Comando = new MySqlCommand(query, Conexao);
 
             MySqlDataReader Leitura = Comando.ExecuteReader();
@@ -94,6 +94,34 @@ namespace Sistema_Filmes_Atores.DAO
                     f.Vlr_Diaria = Convert.ToDecimal(Leitura[5]);
                     f.Sinopse = Leitura[6].ToString();
                     retorno.Rows.Add(f.Linha());
+                }
+            }
+            Conexao.Close();
+            return retorno;
+        }
+        public DataTable ObterFilmesParaPersonagens()
+        {
+            DataTable retorno = new DataTable();
+            Conexao.Open();
+            string query = "SELECT ID, TITULO, CATEGORIA FROM FILMES ORDER BY ID DESC";
+            MySqlCommand Comando = new MySqlCommand(query, Conexao);
+
+            MySqlDataReader Leitura = Comando.ExecuteReader();
+
+            retorno.Columns.Add("ID Filme");
+            retorno.Columns.Add("Título");
+            retorno.Columns.Add("Categoria");
+
+            if (Leitura.HasRows)
+            {
+                while (Leitura.Read())
+                {
+                    FilmeEntidade f = new FilmeEntidade();
+                    f.Id = Convert.ToInt32(Leitura[0]);
+                    f.Titulo = Leitura[1].ToString();
+                    f.Categoria = Leitura[2].ToString();
+
+                    retorno.Rows.Add(f.LinhaParaPersonagens());
                 }
             }
             Conexao.Close();
@@ -151,6 +179,41 @@ namespace Sistema_Filmes_Atores.DAO
             }
             Conexao.Close();
             return retorno;
+        }public DataTable PesquisarFilmesParaPersonagens(string search)
+        {
+            DataTable retorno = new DataTable();
+            Conexao.Open();
+            string query = "";
+            if (string.IsNullOrEmpty(search))
+            {
+                query = "SELECT ID, TITULO, CATEGORIA FROM FILMES ORDER BY ID DESC";
+            }
+            else
+            {
+                query = "SELECT ID, TITULO, CATEGORIA FROM FILMES WHERE TITULO LIKE '%" + search + "%' OR CATEGORIA LIKE '%" + search + "%' ORDER BY TITULO";
+            }
+            MySqlCommand Comando = new MySqlCommand(query, Conexao);
+
+            MySqlDataReader Leitura = Comando.ExecuteReader();
+
+            retorno.Columns.Add("ID Filme");
+            retorno.Columns.Add("Título");
+            retorno.Columns.Add("Categoria");
+
+            if (Leitura.HasRows)
+            {
+                while (Leitura.Read())
+                {
+                    FilmeEntidade f = new FilmeEntidade();
+                    f.Id = Convert.ToInt32(Leitura[0]);
+                    f.Titulo = Leitura[1].ToString();
+                    f.Categoria = Leitura[2].ToString();
+
+                    retorno.Rows.Add(f.LinhaParaPersonagens());
+                }
+            }
+            Conexao.Close();
+            return retorno;
         }
         public FilmeEntidade PesquisarID(int id)
         {
@@ -176,30 +239,31 @@ namespace Sistema_Filmes_Atores.DAO
             Conexao.Close();
             return f;
         }
-        public DataTable PreencherComboBox()
+        public FilmeEntidade PesquisarTitulo(string titulo)
         {
             DataTable dataTable = new DataTable();
+            Conexao.Open();
+            string query = "SELECT * FROM FILMES Where titulo = @titulo Order by Id desc";
+            MySqlCommand Comando = new MySqlCommand(query, Conexao);
+            Comando.Parameters.AddWithValue("@titulo", titulo);
+            MySqlDataReader resultado = Comando.ExecuteReader();
 
-            string query = "SELECT Id, Titulo, Categoria FROM Filmes";
-
-            using (MySqlConnection connection = new MySqlConnection(LinhaConexao))
+            FilmeEntidade f = new FilmeEntidade();
+            if (resultado.Read())
             {
-                MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
-
-                try
-                {
-                    // Preenche o DataTable com os dados da consulta
-                    adapter.Fill(dataTable);
-                }
-                catch (Exception ex)
-                {
-                    // Lida com erros, se necessário
-                    throw new Exception("Erro ao acessar os dados: " + ex.Message);
-                }
+                f.Id = resultado.GetInt32(0);
+                f.Titulo = resultado.GetString(1);
+                f.Categoria = resultado.GetString(2);
+                f.Duracao = resultado.GetInt32(3);
+                f.IdadeIndicada = resultado.GetInt32(4);
+                f.Sinopse = resultado.GetString(5);
+                f.Vlr_Diaria = resultado.GetDecimal(6);
             }
 
-            return dataTable;
+            Conexao.Close();
+            return f;
         }
+
         public int HoraCompostaParaSegundos(int[] tempo)
         {
             int segundosTotais = (tempo[0] * 3600) + (tempo[1] * 60) + (tempo[2] * 1);

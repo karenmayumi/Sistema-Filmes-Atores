@@ -107,6 +107,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Ferramentas.cs" />
     <Compile Include="Classes\Login.cs" />
     <Compile Include="Classes\Usuarios.cs" />
     <Compile Include="DAO\AtorDAO.cs" />
@@ -162,12 +163,6 @@
     </Compile>
     <Compile Include="Formulários\frmPersonagemAdicionar.Designer.cs">
       <DependentUpon>frmPersonagemAdicionar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formulários\frmPersonagemEditar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formulários\frmPersonagemEditar.Designer.cs">
-      <DependentUpon>frmPersonagemEditar.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>

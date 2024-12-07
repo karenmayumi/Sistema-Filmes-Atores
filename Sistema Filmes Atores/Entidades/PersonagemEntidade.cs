@@ -23,5 +23,9 @@ namespace Sistema_Filmes_Atores.Entidades
         {
             return new object[] { personagemID, Nome, Papel, tituloFilme, nomeAtor };
         }
+        public object[] LinhaParaPersonagemAddEdit()
+        {
+            return new object[] { personagemID, Nome, Papel, nomeAtor , atorID };
+        }
     }
 }

@@ -57,7 +57,7 @@ namespace Sistema_Filmes_Atores
             this.btnAtores.Name = "btnAtores";
             this.btnAtores.Size = new System.Drawing.Size(175, 49);
             this.btnAtores.TabIndex = 6;
-            this.btnAtores.Text = "Ver atores";
+            this.btnAtores.Text = "Atores";
             this.btnAtores.UseVisualStyleBackColor = false;
             this.btnAtores.Click += new System.EventHandler(this.btnAtores_Click_1);
             // 
@@ -75,7 +75,7 @@ namespace Sistema_Filmes_Atores
             this.btnFilmes.Name = "btnFilmes";
             this.btnFilmes.Size = new System.Drawing.Size(180, 49);
             this.btnFilmes.TabIndex = 5;
-            this.btnFilmes.Text = "Ver filmes";
+            this.btnFilmes.Text = "Filmes";
             this.btnFilmes.UseVisualStyleBackColor = false;
             this.btnFilmes.Click += new System.EventHandler(this.btnFilmes_Click);
             // 
@@ -157,6 +157,19 @@ namespace Sistema_Filmes_Atores
             this.pictureBox4.Size = new System.Drawing.Size(83, 79);
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
+            // 
+            // btnPersonagens
+            // 
+            this.btnPersonagens.BackColor = System.Drawing.Color.Snow;
+            this.btnPersonagens.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonagens.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnPersonagens.Location = new System.Drawing.Point(62, 255);
+            this.btnPersonagens.Name = "btnPersonagens";
+            this.btnPersonagens.Size = new System.Drawing.Size(190, 50);
+            this.btnPersonagens.TabIndex = 9;
+            this.btnPersonagens.Text = "Personagens";
+            this.btnPersonagens.UseVisualStyleBackColor = false;
+            this.btnPersonagens.Click += new System.EventHandler(this.btnPersonagens_Click_1);
             // 
             // frmMenu
             // 
