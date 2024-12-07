@@ -593,9 +593,39 @@ namespace Sistema_Filmes_Atores.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Sistema_de_Locadora__2_3 {
+            get {
+                object obj = ResourceManager.GetObject("Sistema de Locadora (2)3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sistema_de_Locadora__3_ {
             get {
                 object obj = ResourceManager.GetObject("Sistema de Locadora (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sistema_de_Locadora__3_1 {
+            get {
+                object obj = ResourceManager.GetObject("Sistema de Locadora (3)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sistema_de_Locadora__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Sistema de Locadora (4)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

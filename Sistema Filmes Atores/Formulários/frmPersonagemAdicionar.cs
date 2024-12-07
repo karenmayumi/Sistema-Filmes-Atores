@@ -161,5 +161,20 @@ namespace Sistema_Filmes_Atores.Formulários
             }
 
         }
+
+        private void frmPersonagemAdicionar_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblnomeFilme_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtPersonagens_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

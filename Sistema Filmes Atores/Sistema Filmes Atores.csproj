@@ -403,5 +403,14 @@
   <ItemGroup>
     <None Include="Resources\fundoeditarfilmes.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sistema de Locadora %282%293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sistema de Locadora %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sistema de Locadora %284%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

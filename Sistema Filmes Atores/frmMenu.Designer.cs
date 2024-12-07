@@ -112,15 +112,16 @@ namespace Sistema_Filmes_Atores
             // 
             // btnPersonagens
             // 
-            this.btnPersonagens.BackColor = System.Drawing.SystemColors.Window;
+            this.btnPersonagens.BackColor = System.Drawing.Color.Snow;
             this.btnPersonagens.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
             this.btnPersonagens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPersonagens.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersonagens.Location = new System.Drawing.Point(96, 254);
+            this.btnPersonagens.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnPersonagens.Location = new System.Drawing.Point(86, 254);
             this.btnPersonagens.Name = "btnPersonagens";
-            this.btnPersonagens.Size = new System.Drawing.Size(168, 49);
+            this.btnPersonagens.Size = new System.Drawing.Size(182, 49);
             this.btnPersonagens.TabIndex = 9;
-            this.btnPersonagens.Text = "Ver personagens";
+            this.btnPersonagens.Text = "Personagens";
             this.btnPersonagens.UseVisualStyleBackColor = false;
             this.btnPersonagens.Click += new System.EventHandler(this.btnPersonagens_Click);
             // 
@@ -130,7 +131,7 @@ namespace Sistema_Filmes_Atores
             this.pictureBox2.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources.iconepersonagenss1;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.pictureBox2.Location = new System.Drawing.Point(137, 168);
+            this.pictureBox2.Location = new System.Drawing.Point(132, 168);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(83, 80);
             this.pictureBox2.TabIndex = 10;
@@ -157,18 +158,6 @@ namespace Sistema_Filmes_Atores
             this.pictureBox4.Size = new System.Drawing.Size(83, 79);
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
-            // 
-            // btnPersonagens
-            // 
-            this.btnPersonagens.BackColor = System.Drawing.Color.Snow;
-            this.btnPersonagens.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersonagens.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnPersonagens.Location = new System.Drawing.Point(62, 255);
-            this.btnPersonagens.Name = "btnPersonagens";
-            this.btnPersonagens.Size = new System.Drawing.Size(190, 50);
-            this.btnPersonagens.TabIndex = 9;
-            this.btnPersonagens.Text = "Personagens";
-            this.btnPersonagens.UseVisualStyleBackColor = false;
             // 
             // frmMenu
             // 
