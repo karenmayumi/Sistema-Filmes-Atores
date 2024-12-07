@@ -105,9 +105,9 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(26, 45);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(188, 22);
+            this.label4.Size = new System.Drawing.Size(95, 22);
             this.label4.TabIndex = 39;
-            this.label4.Text = "Personagens do filme:";
+            this.label4.Text = "Elenco de:";
             // 
             // txtPapel
             // 
@@ -186,7 +186,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.lblnomeFilme.AutoSize = true;
             this.lblnomeFilme.BackColor = System.Drawing.Color.Transparent;
             this.lblnomeFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnomeFilme.Location = new System.Drawing.Point(209, 45);
+            this.lblnomeFilme.Location = new System.Drawing.Point(118, 45);
             this.lblnomeFilme.Name = "lblnomeFilme";
             this.lblnomeFilme.Size = new System.Drawing.Size(97, 22);
             this.lblnomeFilme.TabIndex = 53;
@@ -247,6 +247,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.lblTitulo.Size = new System.Drawing.Size(266, 25);
             this.lblTitulo.TabIndex = 58;
             this.lblTitulo.Text = "Adicionar/Editar Personagem";
+            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // lblIdPersonagem
             // 
