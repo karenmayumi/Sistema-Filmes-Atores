@@ -169,7 +169,6 @@ namespace Sistema_Filmes_Atores
             this.btnPersonagens.TabIndex = 9;
             this.btnPersonagens.Text = "Personagens";
             this.btnPersonagens.UseVisualStyleBackColor = false;
-            this.btnPersonagens.Click += new System.EventHandler(this.btnPersonagens_Click_1);
             // 
             // frmMenu
             // 
