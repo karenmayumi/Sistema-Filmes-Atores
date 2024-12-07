@@ -25,11 +25,6 @@ namespace Sistema_Filmes_Atores
             atores.Show();
         }
 
-        private void btnPersonagens_Click(object sender, EventArgs e)
-        {
-            frmPersonagem personagem = new frmPersonagem();
-            personagem.Show();
-        }
 
         private void btnAtores_Click_1(object sender, EventArgs e)
         {
@@ -41,6 +36,12 @@ namespace Sistema_Filmes_Atores
         {
             frmFilmes filmes = new frmFilmes();
             filmes.Show();
+        }
+
+        private void btnPersonagens_Click(object sender, EventArgs e)
+        {
+            frmPersonagem personagem = new frmPersonagem();
+            personagem.Show();
         }
     }
 }

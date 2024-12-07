@@ -39,5 +39,10 @@ namespace Sistema_Filmes_Atores
         {
             Visible = true;
         }
+
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

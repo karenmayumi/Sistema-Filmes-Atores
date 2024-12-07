@@ -184,5 +184,10 @@ namespace Sistema_Filmes_Atores.Formulários
 
             numSegundosTotais.Value = dao.HoraCompostaParaSegundos(tempoInteiro);
         }
+
+        private void txtCategoria_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

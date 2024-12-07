@@ -51,7 +51,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.btnAtorAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtorAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtorAdd.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAtorAdd.Location = new System.Drawing.Point(400, 90);
+            this.btnAtorAdd.Location = new System.Drawing.Point(400, 116);
             this.btnAtorAdd.Name = "btnAtorAdd";
             this.btnAtorAdd.Size = new System.Drawing.Size(142, 24);
             this.btnAtorAdd.TabIndex = 5;
@@ -63,7 +63,7 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             this.dtAtores.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dtAtores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtAtores.Location = new System.Drawing.Point(33, 117);
+            this.dtAtores.Location = new System.Drawing.Point(33, 146);
             this.dtAtores.Name = "dtAtores";
             this.dtAtores.Size = new System.Drawing.Size(509, 230);
             this.dtAtores.TabIndex = 8;
@@ -76,16 +76,16 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(30, 74);
+            this.label1.Location = new System.Drawing.Point(30, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 16);
+            this.label1.Size = new System.Drawing.Size(188, 32);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Pesquisar :";
+            this.label1.Text = "Escreva na caixa de pesquisa\r\no ator que deseja procurar:\r\n";
             // 
             // txtPesquisar
             // 
             this.txtPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisar.Location = new System.Drawing.Point(33, 93);
+            this.txtPesquisar.Location = new System.Drawing.Point(33, 122);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(270, 18);
             this.txtPesquisar.TabIndex = 6;
@@ -107,7 +107,7 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             this.pictureBox2.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources.Logo_Locadora_removebg_preview__1_;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 353);
+            this.pictureBox2.Location = new System.Drawing.Point(33, 382);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(126, 30);
             this.pictureBox2.TabIndex = 11;
@@ -130,7 +130,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(582, 391);
+            this.ClientSize = new System.Drawing.Size(583, 418);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);

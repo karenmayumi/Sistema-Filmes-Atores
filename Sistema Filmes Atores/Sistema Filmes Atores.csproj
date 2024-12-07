@@ -351,5 +351,62 @@
   <ItemGroup>
     <None Include="Resources\Sistema de Locadora %281%291.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FundoMenu%28IdeiaKaren%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\character.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FundoMenu%28IdeiaKaren%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconelogin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconelogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconelogin1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconeloginn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\senhaiconee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\senhaiconee1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\senhaicone-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\senhaicone-removebg-preview-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\senhaicone-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\senhaicone-removebg-preview2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\senhaicone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\senha icone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconepersonagenss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconepersonagenss1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design sem nome %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundoeditarfilmes.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

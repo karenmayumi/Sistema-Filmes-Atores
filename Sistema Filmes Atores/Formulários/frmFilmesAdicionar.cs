@@ -126,6 +126,9 @@ namespace Sistema_Filmes_Atores.Formulários
             }
         }
 
-     
+        private void numSegundosTotais_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

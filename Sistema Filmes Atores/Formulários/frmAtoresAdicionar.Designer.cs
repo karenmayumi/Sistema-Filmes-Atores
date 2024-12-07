@@ -78,9 +78,9 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(55, 152);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 17);
+            this.label2.Size = new System.Drawing.Size(47, 17);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Idade";
+            this.label2.Text = "Idade:";
             // 
             // label1
             // 
@@ -89,9 +89,9 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(55, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.Size = new System.Drawing.Size(49, 17);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Nome";
+            this.label1.Text = "Nome:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cbxGenero
@@ -114,9 +114,9 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(54, 195);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 20);
+            this.label3.Size = new System.Drawing.Size(61, 20);
             this.label3.TabIndex = 30;
-            this.label3.Text = "Gênero";
+            this.label3.Text = "Gênero:";
             // 
             // txtNomeArtistico
             // 
@@ -132,9 +132,9 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(52, 109);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 17);
+            this.label4.Size = new System.Drawing.Size(103, 17);
             this.label4.TabIndex = 31;
-            this.label4.Text = "Nome Artístico";
+            this.label4.Text = "Nome Artístico:";
             // 
             // label5
             // 
