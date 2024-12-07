@@ -19,5 +19,9 @@ namespace Sistema_Filmes_Atores.Entidades
         {
             return new object[] { Id, Titulo, Categoria, Duracao, IdadeIndicada, Vlr_Diaria, Sinopse };
         }
+        public object[] LinhaParaPersonagens()
+        {
+            return new object[] { Id, Titulo, Categoria };
+        }
     }
 }

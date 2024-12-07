@@ -37,6 +37,29 @@ namespace Sistema_Filmes_Atores.DAO
             Conexao.Close();
             return retorno;
         }
+        public int AtualizarPersonagem(PersonagemEntidade per)
+        {
+            string Query = "UPDATE PERSONAGENS SET nome=@nome, atorID=@atorID, filmeID=@filmeID, papel=@papel " +
+                "WHERE personagemid = @personagemid ; ";
+            Conexao.Open();
+            MySqlCommand Comando = new MySqlCommand(Query, Conexao);
+            MySqlParameter par1 = new MySqlParameter("@nome", per.Nome);
+            MySqlParameter par2 = new MySqlParameter("@atorid", per.atorID);
+            MySqlParameter par3 = new MySqlParameter("@filmeid", per.filmeID);
+            MySqlParameter par4 = new MySqlParameter("@papel", per.Papel);
+            MySqlParameter par5 = new MySqlParameter("@personagemid", per.personagemID);
+
+            Comando.Parameters.Add(par1);
+            Comando.Parameters.Add(par2);
+            Comando.Parameters.Add(par3);
+            Comando.Parameters.Add(par4);
+            Comando.Parameters.Add(par5);
+
+            int retorno = Comando.ExecuteNonQuery();
+
+            Conexao.Close();
+            return retorno;
+        }
         public DataTable ObterPersonagem()
         {
             DataTable dt = new DataTable();
@@ -122,6 +145,113 @@ namespace Sistema_Filmes_Atores.DAO
             }
             Conexao.Close();
             return dt;
+        }
+        public PersonagemEntidade PesquisarID(int id)
+        {
+            DataTable dataTable = new DataTable();
+            Conexao.Open();
+            string query = @"
+                        SELECT P.personagemid, P.filmeid, P.atorid, P.nome, P.papel, F.titulo, A.nome
+                        FROM Personagens as P
+                        INNER JOIN ATORES as A ON A.Id = P.atorid
+                        INNER JOIN FILMES as F ON F.Id = P.filmeid
+                        WHERE P.personagemid = @id ORDER BY P.personagemId DESC;";
+            MySqlCommand Comando = new MySqlCommand(query, Conexao);
+            Comando.Parameters.AddWithValue("@id", id);
+            MySqlDataReader resultado = Comando.ExecuteReader();
+
+            PersonagemEntidade p = new PersonagemEntidade();
+            if (resultado.Read())
+            {
+                p.personagemID = resultado.GetInt32(0);
+                p.filmeID = resultado.GetInt32(1);
+                p.atorID = resultado.GetInt32(2);
+                p.Nome = resultado.GetString(3);
+                p.Papel = resultado.GetString(4);
+                p.tituloFilme = resultado.GetString(5);
+                p.nomeAtor = resultado.GetString(6);
+            }
+
+            Conexao.Close();
+            return p;
+        }
+        public DataTable PesquisarPersonagensDoFilme(string search)
+        {
+            DataTable dt = new DataTable();
+            Conexao.Open();
+            string Query = "";
+            if (string.IsNullOrEmpty(search))
+            {
+                Query = @"SELECT P.personagemid, P.nome, P.papel, A.nome, A.ID FROM Personagens as P 
+                            INNER JOIN ATORES as A ON A.Id = P.atorid
+                            Order by P.personagemId desc; ";
+            }
+            else
+            {
+                Query = @"
+                        SELECT P.personagemid, P.nome, P.papel, A.nome, A.ID 
+                        FROM Personagens as P
+                        INNER JOIN ATORES as A ON A.Id = P.atorid
+                        INNER JOIN FILMES as F ON F.Id = P.filmeid
+                        WHERE F.TITULO = '" + search + @"'
+                        ORDER BY P.personagemId DESC;
+                                        ";
+            }
+            MySqlCommand Comando = new MySqlCommand(Query, Conexao);
+
+            MySqlDataReader Leitura = Comando.ExecuteReader();
+
+            dt.Columns.Add("personagemID");
+            dt.Columns.Add("Nome do Personagem");
+            dt.Columns.Add("Papel");
+            dt.Columns.Add("Nome do Ator");
+            dt.Columns.Add("ID do Ator");
+
+            if (Leitura.HasRows)
+            {
+                while (Leitura.Read())
+                {
+                    PersonagemEntidade p = new PersonagemEntidade();
+                    p.personagemID = Convert.ToInt32(Leitura[0]);
+                    p.Nome = Leitura[1].ToString();
+                    p.Papel = Leitura[2].ToString();
+                    p.nomeAtor = Leitura[3].ToString();
+                    p.atorID = Convert.ToInt32(Leitura[4]);
+                    dt.Rows.Add(p.LinhaParaPersonagemAddEdit());
+                }
+            }
+            Conexao.Close();
+            return dt;
+        }
+        public int ExcluirPersonagem(int i)
+        {
+            Conexao.Open();
+            string Query = "DELETE FROM PERSONAGENS WHERE personagemid = @personagemid; ";
+            MySqlCommand Comando = new MySqlCommand(Query, Conexao);
+            MySqlParameter par1 = new MySqlParameter("@personagemid", i);
+
+            Comando.Parameters.Add(par1);
+            int retorno = Comando.ExecuteNonQuery();
+
+            Conexao.Close();
+            return retorno;
+        }
+        public int PesquisarFilmeDoPersonagem(int search)
+        {
+            Conexao.Open();
+            string
+                Query = @"
+                        SELECT F.ID 
+                        FROM Personagens as P
+                        INNER JOIN FILMES as F ON F.Id = P.filmeid
+                        WHERE P.PERSONAGEMID = '" + search + "';";
+
+            MySqlCommand Comando = new MySqlCommand(Query, Conexao);
+            MySqlDataReader Leitura = Comando.ExecuteReader();
+            Leitura.Read();
+            int idFilme = Convert.ToInt32(Leitura[0]);
+            Conexao.Close();
+            return idFilme;
         }
     }
 }

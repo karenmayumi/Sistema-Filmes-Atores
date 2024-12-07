@@ -18,22 +18,24 @@ namespace Sistema_Filmes_Atores
             InitializeComponent();
         }
 
-        private void btnFilmes_Click(object sender, EventArgs e)
+       
+
+        private void btnPersonagens_Click_1(object sender, EventArgs e)
+        {
+            frmPersonagem personagem = new frmPersonagem();
+            personagem.Show();
+        }
+
+        private void btnFilmes_Click_1(object sender, EventArgs e)
         {
             frmFilmes filmes = new frmFilmes();
             filmes.Show();
         }
 
-        private void btnAtores_Click(object sender, EventArgs e)
+        private void btnAtores_Click_1(object sender, EventArgs e)
         {
             frmAtores atores = new frmAtores();
             atores.Show();
-        }
-
-        private void btnPersonagens_Click(object sender, EventArgs e)
-        {
-            frmPersonagem personagem = new frmPersonagem();
-            personagem.Show();
         }
     }
 }
