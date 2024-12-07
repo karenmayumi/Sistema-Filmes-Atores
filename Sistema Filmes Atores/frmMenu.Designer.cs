@@ -39,7 +39,8 @@ namespace Sistema_Filmes_Atores
             // btnAtores
             // 
             this.btnAtores.BackColor = System.Drawing.Color.Snow;
-            this.btnAtores.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtores.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtores.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAtores.Location = new System.Drawing.Point(62, 189);
             this.btnAtores.Name = "btnAtores";
@@ -47,11 +48,13 @@ namespace Sistema_Filmes_Atores
             this.btnAtores.TabIndex = 6;
             this.btnAtores.Text = "Ver atores";
             this.btnAtores.UseVisualStyleBackColor = false;
+            this.btnAtores.Click += new System.EventHandler(this.btnAtores_Click_1);
             // 
             // btnFilmes
             // 
             this.btnFilmes.BackColor = System.Drawing.Color.Snow;
-            this.btnFilmes.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilmes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFilmes.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFilmes.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnFilmes.Location = new System.Drawing.Point(62, 124);
             this.btnFilmes.Name = "btnFilmes";
@@ -79,7 +82,7 @@ namespace Sistema_Filmes_Atores
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(90, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 52);
+            this.label1.Size = new System.Drawing.Size(150, 52);
             this.label1.TabIndex = 8;
             this.label1.Text = "Menu ";
             // 

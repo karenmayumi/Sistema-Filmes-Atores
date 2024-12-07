@@ -312,5 +312,26 @@
   <ItemGroup>
     <None Include="Resources\TelaMenu02.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logosemfundo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FundoAdicionarAtores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone ator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconeator2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EDITAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design sem nome %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design sem nome %282%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

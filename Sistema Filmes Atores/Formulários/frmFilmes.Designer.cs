@@ -33,12 +33,13 @@ namespace Sistema_Filmes_Atores
             this.label1 = new System.Windows.Forms.Label();
             this.dtFilmes = new System.Windows.Forms.DataGridView();
             this.btnFilmeAdd = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtFilmes)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPesquisa
             // 
-            this.txtPesquisa.Location = new System.Drawing.Point(41, 58);
+            this.txtPesquisa.Location = new System.Drawing.Point(41, 100);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(277, 20);
             this.txtPesquisa.TabIndex = 0;
@@ -47,7 +48,7 @@ namespace Sistema_Filmes_Atores
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 42);
+            this.label1.Location = new System.Drawing.Point(38, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 13);
             this.label1.TabIndex = 1;
@@ -56,7 +57,7 @@ namespace Sistema_Filmes_Atores
             // dtFilmes
             // 
             this.dtFilmes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtFilmes.Location = new System.Drawing.Point(41, 111);
+            this.dtFilmes.Location = new System.Drawing.Point(41, 138);
             this.dtFilmes.Name = "dtFilmes";
             this.dtFilmes.Size = new System.Drawing.Size(608, 297);
             this.dtFilmes.TabIndex = 2;
@@ -65,7 +66,7 @@ namespace Sistema_Filmes_Atores
             // 
             // btnFilmeAdd
             // 
-            this.btnFilmeAdd.Location = new System.Drawing.Point(536, 55);
+            this.btnFilmeAdd.Location = new System.Drawing.Point(526, 97);
             this.btnFilmeAdd.Name = "btnFilmeAdd";
             this.btnFilmeAdd.Size = new System.Drawing.Size(113, 23);
             this.btnFilmeAdd.TabIndex = 3;
@@ -73,11 +74,22 @@ namespace Sistema_Filmes_Atores
             this.btnFilmeAdd.UseVisualStyleBackColor = true;
             this.btnFilmeAdd.Click += new System.EventHandler(this.btnFilmeAdd_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(564, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(129, 38);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "FILMES";
+            // 
             // frmFilmes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 447);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnFilmeAdd);
             this.Controls.Add(this.dtFilmes);
             this.Controls.Add(this.label1);
@@ -96,6 +108,7 @@ namespace Sistema_Filmes_Atores
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dtFilmes;
         private System.Windows.Forms.Button btnFilmeAdd;
+        private System.Windows.Forms.Label label2;
     }
 }
 

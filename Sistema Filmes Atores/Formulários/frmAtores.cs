@@ -64,5 +64,9 @@ namespace Sistema_Filmes_Atores.Formulários
             editar.ShowDialog();
         }
 
+        private void frmAtores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -48,5 +48,10 @@ namespace Sistema_Filmes_Atores.Formulários
         {
 
         }
+
+        private void frmAtoresAdicionar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
