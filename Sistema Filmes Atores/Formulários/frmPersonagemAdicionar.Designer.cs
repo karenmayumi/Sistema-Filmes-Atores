@@ -29,6 +29,8 @@ namespace Sistema_Filmes_Atores.Formulários
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPersonagemAdicionar));
             this.txtNomePersonagem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdicionar = new System.Windows.Forms.Button();
@@ -48,6 +50,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblIdPersonagem = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtPersonagens)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtAddAtor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,11 +80,15 @@ namespace Sistema_Filmes_Atores.Formulários
             this.btnAdicionar.BackColor = System.Drawing.SystemColors.Window;
             this.btnAdicionar.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
             this.btnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdicionar.Location = new System.Drawing.Point(560, 298);
+            this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdicionar.ImageKey = "iconeadicionar editar.png";
+            this.btnAdicionar.ImageList = this.imageList1;
+            this.btnAdicionar.Location = new System.Drawing.Point(562, 299);
             this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(208, 42);
+            this.btnAdicionar.Size = new System.Drawing.Size(180, 44);
             this.btnAdicionar.TabIndex = 40;
-            this.btnAdicionar.Text = "Adicionar/Editar Personagem";
+            this.btnAdicionar.Text = "Adicionar/Editar \r\nPersonagem\r\n";
             this.btnAdicionar.UseVisualStyleBackColor = false;
             this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
@@ -253,6 +260,12 @@ namespace Sistema_Filmes_Atores.Formulários
             this.pictureBox1.TabIndex = 60;
             this.pictureBox1.TabStop = false;
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "iconeadicionar editar.png");
+            // 
             // frmPersonagemAdicionar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,5 +324,6 @@ namespace Sistema_Filmes_Atores.Formulários
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblIdPersonagem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
