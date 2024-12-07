@@ -142,14 +142,14 @@
   <data name="Sistema de Locadora4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sistema de Locadora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fundoFilmes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fundoFilmes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Design sem nome (1)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Design sem nome (1)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sistema de Locadora (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sistema de Locadora (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sistema de Locadora3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sistema de Locadora3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconeator2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconeator2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,8 +160,8 @@
   <data name="Design sem nome (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Design sem nome (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="filme" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filme.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sistema de Locadora2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sistema de Locadora2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo_Locadora-removebg-preview (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo_Locadora-removebg-preview (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,14 +169,20 @@
   <data name="Sistema de Locadora" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sistema de Locadora.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sistema de Locadora2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sistema de Locadora2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sistema de Locadora (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sistema de Locadora (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fotinhooo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fotinhooo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="filme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filme.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Logo Locadora" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo Locadora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3cf656908a2481110485bac3bf1297d9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3cf656908a2481110485bac3bf1297d9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo_Locadora-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo_Locadora-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,8 +193,14 @@
   <data name="TelaMenu02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TelaMenu02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="3cf656908a2481110485bac3bf1297d9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3cf656908a2481110485bac3bf1297d9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sistema de Locadora5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sistema de Locadora1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FundoFilmess" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FundoFilmess.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fundoFilmes1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fundoFilmes1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sistema de Locadora (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sistema de Locadora (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,11 +217,14 @@
   <data name="icone ator" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone ator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="4831192" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4831192.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Design sem nome (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Design sem nome (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bg-etec_2022" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bg-etec_2022.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sistema de Locadora (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sistema de Locadora (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EDITAR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EDITAR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,10 +232,13 @@
   <data name="iconeator" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconeator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Sistema de Locadora3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sistema de Locadora3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Fotos Divertida Mente 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fotos Divertida Mente 2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Design sem nome (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Design sem nome (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sistema de Locadora (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sistema de Locadora (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

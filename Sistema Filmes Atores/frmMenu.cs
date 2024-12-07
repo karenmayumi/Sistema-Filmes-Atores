@@ -18,11 +18,6 @@ namespace Sistema_Filmes_Atores
             InitializeComponent();
         }
 
-        private void btnFilmes_Click(object sender, EventArgs e)
-        {
-            frmFilmes filmes = new frmFilmes();
-            filmes.Show();
-        }
 
         private void btnAtores_Click(object sender, EventArgs e)
         {
@@ -40,6 +35,12 @@ namespace Sistema_Filmes_Atores
         {
             frmAtores atores = new frmAtores();
             atores.Show();
+        }
+
+        private void btnFilmes_Click(object sender, EventArgs e)
+        {
+            frmFilmes filmes = new frmFilmes();
+            filmes.Show();
         }
     }
 }

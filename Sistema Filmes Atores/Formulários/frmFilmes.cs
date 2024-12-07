@@ -66,5 +66,10 @@ namespace Sistema_Filmes_Atores
 
             LinhaSelecionada = e.RowIndex;
         }
+
+        private void frmFilmes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

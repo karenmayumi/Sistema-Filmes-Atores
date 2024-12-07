@@ -29,6 +29,8 @@ namespace Sistema_Filmes_Atores.Formulários
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFilmesAdicionar));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,6 +52,8 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.numVlrDiaria = new System.Windows.Forms.NumericUpDown();
+            this.label12 = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numSegundosTotais)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numIdade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHoras)).BeginInit();
@@ -61,66 +65,80 @@ namespace Sistema_Filmes_Atores.Formulários
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 33);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.29F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(37, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.Size = new System.Drawing.Size(84, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Título do filme";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 105);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(37, 117);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.Size = new System.Drawing.Size(74, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Categoria(s)";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(30, 225);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Window;
+            this.label3.Location = new System.Drawing.Point(37, 187);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 18);
+            this.label3.Size = new System.Drawing.Size(54, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Duração";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(240, 33);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(37, 231);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 13);
+            this.label4.Size = new System.Drawing.Size(52, 15);
             this.label4.TabIndex = 3;
             this.label4.Text = "Sinopse";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(30, 173);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Window;
+            this.label5.Location = new System.Drawing.Point(37, 150);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 13);
+            this.label5.Size = new System.Drawing.Size(156, 15);
             this.label5.TabIndex = 4;
             this.label5.Text = "Idade Indicada(Acima de...)";
             // 
             // txtTitulo
             // 
-            this.txtTitulo.Location = new System.Drawing.Point(33, 49);
+            this.txtTitulo.Location = new System.Drawing.Point(129, 78);
             this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(163, 20);
+            this.txtTitulo.Size = new System.Drawing.Size(228, 20);
             this.txtTitulo.TabIndex = 6;
             // 
             // txtCategoria
             // 
-            this.txtCategoria.Location = new System.Drawing.Point(33, 121);
+            this.txtCategoria.Location = new System.Drawing.Point(117, 116);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(163, 20);
             this.txtCategoria.TabIndex = 7;
             // 
             // numSegundosTotais
             // 
-            this.numSegundosTotais.Location = new System.Drawing.Point(33, 249);
+            this.numSegundosTotais.Location = new System.Drawing.Point(95, 187);
             this.numSegundosTotais.Maximum = new decimal(new int[] {
             216000,
             0,
@@ -134,42 +152,54 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             // numIdade
             // 
-            this.numIdade.Location = new System.Drawing.Point(33, 189);
+            this.numIdade.Location = new System.Drawing.Point(199, 150);
             this.numIdade.Name = "numIdade";
             this.numIdade.Size = new System.Drawing.Size(134, 20);
             this.numIdade.TabIndex = 10;
             // 
             // rtxtSinopse
             // 
-            this.rtxtSinopse.Location = new System.Drawing.Point(243, 49);
+            this.rtxtSinopse.Location = new System.Drawing.Point(95, 231);
             this.rtxtSinopse.Name = "rtxtSinopse";
-            this.rtxtSinopse.Size = new System.Drawing.Size(161, 82);
+            this.rtxtSinopse.Size = new System.Drawing.Size(209, 50);
             this.rtxtSinopse.TabIndex = 12;
             this.rtxtSinopse.Text = "";
             // 
             // btnAddFilme
             // 
-            this.btnAddFilme.Location = new System.Drawing.Point(33, 345);
+            this.btnAddFilme.BackColor = System.Drawing.Color.Firebrick;
+            this.btnAddFilme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddFilme.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAddFilme.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddFilme.ImageKey = "filmeicon.png";
+            this.btnAddFilme.ImageList = this.imageList1;
+            this.btnAddFilme.Location = new System.Drawing.Point(181, 348);
             this.btnAddFilme.Name = "btnAddFilme";
-            this.btnAddFilme.Size = new System.Drawing.Size(371, 23);
+            this.btnAddFilme.Size = new System.Drawing.Size(167, 37);
             this.btnAddFilme.TabIndex = 14;
             this.btnAddFilme.Text = "Adicionar Filme";
-            this.btnAddFilme.UseVisualStyleBackColor = true;
+            this.btnAddFilme.UseVisualStyleBackColor = false;
             this.btnAddFilme.Click += new System.EventHandler(this.btnAddFilme_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(240, 173);
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Window;
+            this.label6.Location = new System.Drawing.Point(247, 187);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 13);
+            this.label6.Size = new System.Drawing.Size(86, 15);
             this.label6.TabIndex = 15;
             this.label6.Text = "Valor da diária";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(30, 282);
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.ForeColor = System.Drawing.SystemColors.Window;
+            this.label7.Location = new System.Drawing.Point(54, 295);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 17;
@@ -177,7 +207,7 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             // numHoras
             // 
-            this.numHoras.Location = new System.Drawing.Point(33, 298);
+            this.numHoras.Location = new System.Drawing.Point(59, 311);
             this.numHoras.Maximum = new decimal(new int[] {
             60,
             0,
@@ -191,7 +221,7 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             // numMinutos
             // 
-            this.numMinutos.Location = new System.Drawing.Point(170, 298);
+            this.numMinutos.Location = new System.Drawing.Point(199, 313);
             this.numMinutos.Maximum = new decimal(new int[] {
             60,
             0,
@@ -206,7 +236,9 @@ namespace Sistema_Filmes_Atores.Formulários
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(167, 282);
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.SystemColors.Window;
+            this.label8.Location = new System.Drawing.Point(196, 297);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 13);
             this.label8.TabIndex = 19;
@@ -214,7 +246,7 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             // numSegundos
             // 
-            this.numSegundos.Location = new System.Drawing.Point(315, 298);
+            this.numSegundos.Location = new System.Drawing.Point(345, 313);
             this.numSegundos.Maximum = new decimal(new int[] {
             60,
             0,
@@ -229,7 +261,9 @@ namespace Sistema_Filmes_Atores.Formulários
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(312, 282);
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ForeColor = System.Drawing.SystemColors.Window;
+            this.label9.Location = new System.Drawing.Point(342, 297);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 13);
             this.label9.TabIndex = 21;
@@ -238,8 +272,10 @@ namespace Sistema_Filmes_Atores.Formulários
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(139, 287);
+            this.label10.ForeColor = System.Drawing.SystemColors.Window;
+            this.label10.Location = new System.Drawing.Point(154, 300);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(22, 31);
             this.label10.TabIndex = 23;
@@ -248,8 +284,10 @@ namespace Sistema_Filmes_Atores.Formulários
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(275, 287);
+            this.label11.ForeColor = System.Drawing.SystemColors.Window;
+            this.label11.Location = new System.Drawing.Point(311, 304);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(22, 31);
             this.label11.TabIndex = 24;
@@ -258,7 +296,7 @@ namespace Sistema_Filmes_Atores.Formulários
             // numVlrDiaria
             // 
             this.numVlrDiaria.DecimalPlaces = 2;
-            this.numVlrDiaria.Location = new System.Drawing.Point(243, 189);
+            this.numVlrDiaria.Location = new System.Drawing.Point(335, 187);
             this.numVlrDiaria.Maximum = new decimal(new int[] {
             999999,
             0,
@@ -268,11 +306,33 @@ namespace Sistema_Filmes_Atores.Formulários
             this.numVlrDiaria.Size = new System.Drawing.Size(161, 20);
             this.numVlrDiaria.TabIndex = 25;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Firebrick;
+            this.label12.Location = new System.Drawing.Point(176, 21);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(221, 28);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "Cadastro de Filmes";
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "filmeicon.png");
+            // 
             // frmFilmesAdicionar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 394);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources.Sistema_de_Locadora__1_1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(550, 414);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.numVlrDiaria);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -294,6 +354,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Name = "frmFilmesAdicionar";
             this.Text = "Adicionar Filme";
             ((System.ComponentModel.ISupportInitialize)(this.numSegundosTotais)).EndInit();
@@ -330,5 +391,7 @@ namespace Sistema_Filmes_Atores.Formulários
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.NumericUpDown numVlrDiaria;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

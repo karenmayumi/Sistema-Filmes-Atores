@@ -333,5 +333,23 @@
   <ItemGroup>
     <None Include="Resources\Design sem nome %282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4831192.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundoFilmes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FundoFilmess.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundoFilmes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sistema de Locadora1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sistema de Locadora %281%291.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

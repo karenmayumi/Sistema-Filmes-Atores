@@ -73,6 +73,16 @@ namespace Sistema_Filmes_Atores.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4831192 {
+            get {
+                object obj = ResourceManager.GetObject("4831192", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bg_etec_2022 {
             get {
                 object obj = ResourceManager.GetObject("bg-etec_2022", resourceCulture);
@@ -213,6 +223,36 @@ namespace Sistema_Filmes_Atores.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fundoFilmes {
+            get {
+                object obj = ResourceManager.GetObject("fundoFilmes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fundoFilmes1 {
+            get {
+                object obj = ResourceManager.GetObject("fundoFilmes1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FundoFilmess {
+            get {
+                object obj = ResourceManager.GetObject("FundoFilmess", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icone_ator {
             get {
                 object obj = ResourceManager.GetObject("icone ator", resourceCulture);
@@ -323,6 +363,16 @@ namespace Sistema_Filmes_Atores.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Sistema_de_Locadora__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("Sistema de Locadora (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sistema_de_Locadora__2_ {
             get {
                 object obj = ResourceManager.GetObject("Sistema de Locadora (2)", resourceCulture);
@@ -396,6 +446,16 @@ namespace Sistema_Filmes_Atores.Properties {
         internal static System.Drawing.Bitmap Sistema_de_Locadora4 {
             get {
                 object obj = ResourceManager.GetObject("Sistema de Locadora4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sistema_de_Locadora5 {
+            get {
+                object obj = ResourceManager.GetObject("Sistema de Locadora5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

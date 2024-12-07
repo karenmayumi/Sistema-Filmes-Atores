@@ -125,5 +125,7 @@ namespace Sistema_Filmes_Atores.Formulários
                 numSegundosTotais.Value = dao.HoraCompostaParaSegundos(tempoInteiro);
             }
         }
+
+     
     }
 }

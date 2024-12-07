@@ -33,6 +33,7 @@ namespace Sistema_Filmes_Atores
             this.btnFilmes = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnPersonagens = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +63,7 @@ namespace Sistema_Filmes_Atores
             this.btnFilmes.TabIndex = 5;
             this.btnFilmes.Text = "Ver filmes";
             this.btnFilmes.UseVisualStyleBackColor = false;
+            this.btnFilmes.Click += new System.EventHandler(this.btnFilmes_Click);
             // 
             // pictureBox1
             // 
@@ -86,6 +88,18 @@ namespace Sistema_Filmes_Atores
             this.label1.TabIndex = 8;
             this.label1.Text = "Menu ";
             // 
+            // btnPersonagens
+            // 
+            this.btnPersonagens.BackColor = System.Drawing.SystemColors.Window;
+            this.btnPersonagens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPersonagens.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonagens.Location = new System.Drawing.Point(62, 254);
+            this.btnPersonagens.Name = "btnPersonagens";
+            this.btnPersonagens.Size = new System.Drawing.Size(190, 51);
+            this.btnPersonagens.TabIndex = 9;
+            this.btnPersonagens.Text = "Ver personagens";
+            this.btnPersonagens.UseVisualStyleBackColor = false;
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -94,6 +108,7 @@ namespace Sistema_Filmes_Atores
             this.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources.TelaMenu02;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(316, 378);
+            this.Controls.Add(this.btnPersonagens);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAtores);
@@ -112,5 +127,6 @@ namespace Sistema_Filmes_Atores
         private System.Windows.Forms.Button btnFilmes;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnPersonagens;
     }
 }
