@@ -21,11 +21,11 @@ namespace Sistema_Filmes_Atores.Entidades
         }
         public object[] LinhaLegivel()
         {
-            return new object[] { personagemID, Nome, Papel, tituloFilme, nomeAtor };
+            return new object[] { personagemID, Nome, Papel, tituloFilme };
         }
         public object[] LinhaParaPersonagemAddEdit()
         {
-            return new object[] { personagemID, Nome, Papel, nomeAtor , atorID };
+            return new object[] { personagemID, Nome, Papel };
         }
     }
 }

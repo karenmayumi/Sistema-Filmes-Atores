@@ -19,46 +19,51 @@ namespace Sistema_Filmes_Atores.Formulários
         FilmeDAO filmeDao = new FilmeDAO();
         PersonagemDAO personagemDao = new PersonagemDAO();
 
-        int LinhaSelecionadaA;
         int LinhaSelecionadaF;
         int LinhaSelecionadaP;
         private void AtualizarGridFilme(DataTable dados)
         {
             dtFilme.DataSource = dados;
+            dtFilme.Columns["ID"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dtFilme.Columns["Título"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtFilme.Columns["Categoria"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+        }
+        private void AtualizarGridPersonagens(DataTable dados)
+        {
+            dtPersonagens.DataSource = dados;
+            dtPersonagens.Columns["ID"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dtPersonagens.Columns["Nome"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtPersonagens.Columns["Papel"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dtPersonagens.Columns["Filme"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
         }
         public frmPersonagem()
         {
             InitializeComponent();
 
-            dados = new DataTable();
-            foreach (var atributos in typeof(PersonagemEntidade).GetProperties())
-            {
-                dados.Columns.Add(atributos.Name);
-            }
-
-            dados = personagemDao.ObterPersonagem(); 
-            dtPersonagens.DataSource = dados;
-
+            AtualizarGridPersonagens(personagemDao.ObterPersonagem());
             AtualizarGridFilme(filmeDao.ObterFilmesParaPersonagens());
         }
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
-            dtPersonagens.DataSource = personagemDao.PesquisarPersonagens(txtPesquisa.Text);
+            AtualizarGridPersonagens(personagemDao.PesquisarPersonagens(txtPesquisa.Text));
         }
 
         private void txtPesqFilme_TextChanged(object sender, EventArgs e)
         {
-            dtFilme.DataSource = filmeDao.PesquisarFilmesParaPersonagens(txtPesqFilme.Text);
+            AtualizarGridFilme(filmeDao.PesquisarFilmesParaPersonagens(txtPesqFilme.Text));
         }
 
         private void dtFilme_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             LinhaSelecionadaF = e.RowIndex;
-
-            frmPersonagemAdicionar p = new frmPersonagemAdicionar(Convert.ToInt32(dtFilme.Rows[LinhaSelecionadaF].Cells[0].Value), "Por filme");
+            if(LinhaSelecionadaF != -1)
+            {
+            frmPersonagensVerDados p = new frmPersonagensVerDados(Convert.ToInt32(dtFilme.Rows[LinhaSelecionadaF].Cells[0].Value), "dtFilme");
             p.FormClosed += frmPersonagens_FormClosed;
             p.ShowDialog();
+            }
         }
         private void frmPersonagens_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -70,10 +75,12 @@ namespace Sistema_Filmes_Atores.Formulários
         {
 
             LinhaSelecionadaP = e.RowIndex;
-
-            frmPersonagemAdicionar p = new frmPersonagemAdicionar(Convert.ToInt32(dtPersonagens.Rows[LinhaSelecionadaP].Cells[0].Value),"Por personagem");
+            if (LinhaSelecionadaP != -1)
+            {
+                frmPersonagensVerDados p = new frmPersonagensVerDados(Convert.ToInt32(dtPersonagens.Rows[LinhaSelecionadaP].Cells[0].Value), "dtPersonagem");
             p.FormClosed += frmPersonagens_FormClosed;
             p.ShowDialog();
+            }
         }
     }
 }// não esquecer de puxar os dados do personagem no formulário addPersonagens. Só ta indo o ator e o filme

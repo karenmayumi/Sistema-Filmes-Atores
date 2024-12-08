@@ -108,7 +108,7 @@ namespace Sistema_Filmes_Atores.DAO
 
             MySqlDataReader Leitura = Comando.ExecuteReader();
 
-            retorno.Columns.Add("ID Filme");
+            retorno.Columns.Add("ID");
             retorno.Columns.Add("Título");
             retorno.Columns.Add("Categoria");
 
@@ -190,13 +190,13 @@ namespace Sistema_Filmes_Atores.DAO
             }
             else
             {
-                query = "SELECT ID, TITULO, CATEGORIA FROM FILMES WHERE TITULO LIKE '%" + search + "%' OR CATEGORIA LIKE '%" + search + "%' ORDER BY TITULO";
+                query = "SELECT ID, TITULO, CATEGORIA FROM FILMES WHERE ID = '" + search + "' ORDER BY ID";
             }
             MySqlCommand Comando = new MySqlCommand(query, Conexao);
 
             MySqlDataReader Leitura = Comando.ExecuteReader();
 
-            retorno.Columns.Add("ID Filme");
+            retorno.Columns.Add("ID");
             retorno.Columns.Add("Título");
             retorno.Columns.Add("Categoria");
 
@@ -239,29 +239,29 @@ namespace Sistema_Filmes_Atores.DAO
             Conexao.Close();
             return f;
         }
-        public FilmeEntidade PesquisarTitulo(string titulo)
+        public DataTable PreencherComboBox()
         {
             DataTable dataTable = new DataTable();
-            Conexao.Open();
-            string query = "SELECT * FROM FILMES Where titulo = @titulo Order by Id desc";
-            MySqlCommand Comando = new MySqlCommand(query, Conexao);
-            Comando.Parameters.AddWithValue("@titulo", titulo);
-            MySqlDataReader resultado = Comando.ExecuteReader();
 
-            FilmeEntidade f = new FilmeEntidade();
-            if (resultado.Read())
+            string query = "SELECT Id, Titulo FROM filmes";
+
+            using (MySqlConnection connection = new MySqlConnection(LinhaConexao))
             {
-                f.Id = resultado.GetInt32(0);
-                f.Titulo = resultado.GetString(1);
-                f.Categoria = resultado.GetString(2);
-                f.Duracao = resultado.GetInt32(3);
-                f.IdadeIndicada = resultado.GetInt32(4);
-                f.Sinopse = resultado.GetString(5);
-                f.Vlr_Diaria = resultado.GetDecimal(6);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
+
+                try
+                {
+                    // Preenche o DataTable com os dados da consulta
+                    adapter.Fill(dataTable);
+                }
+                catch (Exception ex)
+                {
+                    // Lida com erros, se necessário
+                    throw new Exception("Erro ao acessar os dados: " + ex.Message);
+                }
             }
 
-            Conexao.Close();
-            return f;
+            return dataTable;
         }
 
         public int HoraCompostaParaSegundos(int[] tempo)

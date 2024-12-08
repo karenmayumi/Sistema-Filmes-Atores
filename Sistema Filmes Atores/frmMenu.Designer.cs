@@ -48,12 +48,13 @@ namespace Sistema_Filmes_Atores
             // 
             // btnAtores
             // 
+            this.btnAtores.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAtores.BackColor = System.Drawing.Color.Snow;
             this.btnAtores.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
             this.btnAtores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtores.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtores.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAtores.Location = new System.Drawing.Point(284, 254);
+            this.btnAtores.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAtores.Location = new System.Drawing.Point(284, 260);
             this.btnAtores.Name = "btnAtores";
             this.btnAtores.Size = new System.Drawing.Size(175, 49);
             this.btnAtores.TabIndex = 6;
@@ -63,15 +64,16 @@ namespace Sistema_Filmes_Atores
             // 
             // btnFilmes
             // 
+            this.btnFilmes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnFilmes.BackColor = System.Drawing.Color.Snow;
             this.btnFilmes.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnFilmes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFilmes.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFilmes.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnFilmes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilmes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnFilmes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFilmes.ImageKey = "(nenhum/a)";
             this.btnFilmes.ImageList = this.imageList1;
-            this.btnFilmes.Location = new System.Drawing.Point(477, 254);
+            this.btnFilmes.Location = new System.Drawing.Point(477, 260);
             this.btnFilmes.Name = "btnFilmes";
             this.btnFilmes.Size = new System.Drawing.Size(180, 49);
             this.btnFilmes.TabIndex = 5;
@@ -100,24 +102,26 @@ namespace Sistema_Filmes_Atores
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(206, 65);
+            this.label1.Location = new System.Drawing.Point(231, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(354, 52);
+            this.label1.Size = new System.Drawing.Size(301, 47);
             this.label1.TabIndex = 8;
-            this.label1.Text = "MENU DE TELAS";
+            this.label1.Text = "Menu de Telas";
             // 
             // btnPersonagens
             // 
+            this.btnPersonagens.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPersonagens.BackColor = System.Drawing.Color.Snow;
             this.btnPersonagens.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
             this.btnPersonagens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPersonagens.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersonagens.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnPersonagens.Location = new System.Drawing.Point(86, 254);
+            this.btnPersonagens.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonagens.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnPersonagens.Location = new System.Drawing.Point(86, 260);
             this.btnPersonagens.Name = "btnPersonagens";
             this.btnPersonagens.Size = new System.Drawing.Size(182, 49);
             this.btnPersonagens.TabIndex = 9;
@@ -127,11 +131,12 @@ namespace Sistema_Filmes_Atores
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources.iconepersonagenss1;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.pictureBox2.Location = new System.Drawing.Point(132, 168);
+            this.pictureBox2.Location = new System.Drawing.Point(132, 174);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(83, 80);
             this.pictureBox2.TabIndex = 10;
@@ -139,10 +144,11 @@ namespace Sistema_Filmes_Atores
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources.iconeator2;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(330, 168);
+            this.pictureBox3.Location = new System.Drawing.Point(330, 174);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(87, 80);
             this.pictureBox3.TabIndex = 11;
@@ -150,10 +156,11 @@ namespace Sistema_Filmes_Atores
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources._4831192;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(525, 169);
+            this.pictureBox4.Location = new System.Drawing.Point(525, 175);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(83, 79);
             this.pictureBox4.TabIndex = 12;
@@ -166,7 +173,7 @@ namespace Sistema_Filmes_Atores
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources.FundoMenu_IdeiaKaren_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(763, 406);
+            this.ClientSize = new System.Drawing.Size(754, 411);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -176,7 +183,10 @@ namespace Sistema_Filmes_Atores
             this.Controls.Add(this.btnAtores);
             this.Controls.Add(this.btnFilmes);
             this.DoubleBuffered = true;
+            this.MaximumSize = new System.Drawing.Size(1000, 600);
+            this.MinimumSize = new System.Drawing.Size(750, 450);
             this.Name = "frmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

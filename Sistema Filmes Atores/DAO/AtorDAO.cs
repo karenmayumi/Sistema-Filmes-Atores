@@ -166,6 +166,41 @@ namespace Sistema_Filmes_Atores.DAO
             Conexao.Close();
             return retorno;
         }
+        public DataTable PesquisarAtoresParaPersonagens(string search)
+        {
+            DataTable retorno = new DataTable();
+            Conexao.Open();
+            string query = "";
+            if (string.IsNullOrEmpty(search))
+            {
+                query = "SELECT Id, nome, nomeartistico FROM ATORES ORDER BY ID DESC";
+            }
+            else
+            {
+                query = "SELECT Id, nome, nomeartistico FROM ATORES WHERE NOME LIKE '%" + search + "%' OR NOMEARTISTICO LIKE '%" + search + "%' ORDER BY ID DESC";
+            }
+            MySqlCommand Comando = new MySqlCommand(query, Conexao);
+
+            MySqlDataReader Leitura = Comando.ExecuteReader();
+
+            retorno.Columns.Add("ID");
+            retorno.Columns.Add("Nome");
+            retorno.Columns.Add("Apelido");
+
+            if (Leitura.HasRows) //terminar aqui
+            {
+                while (Leitura.Read())
+                {
+                    AtorEntidade a = new AtorEntidade();
+                    a.Id = Convert.ToInt32(Leitura[0]);
+                    a.Nome = Leitura[1].ToString();
+                    a.NomeArtistico = Leitura[2].ToString();
+                    retorno.Rows.Add(a.LinhaParaPersonagem());
+                }
+            }
+            Conexao.Close();
+            return retorno;
+        }
         public AtorEntidade PesquisarID(int id)
         {
             DataTable dataTable = new DataTable();

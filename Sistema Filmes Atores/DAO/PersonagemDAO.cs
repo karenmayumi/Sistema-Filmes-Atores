@@ -65,19 +65,17 @@ namespace Sistema_Filmes_Atores.DAO
             DataTable dt = new DataTable();
             Conexao.Open();
             //string query = "SELECT c.Nome, d.Nome  FROM curso as c INNER JOIN disciplina as d in id.d = id.c  Order by c.Id desc";
-            string query = @"SELECT P.personagemid, P.nome, P.papel, F.titulo, A.nome FROM Personagens as P 
-                            INNER JOIN ATORES as A ON A.Id = P.atorid
+            string query = @"SELECT P.personagemid, P.nome, P.papel, F.titulo FROM Personagens as P 
                             INNER JOIN FILMES as F ON F.Id = P.filmeid
                             Order by P.personagemId desc; ";
             //string query = @"SELECT * FROM Personagens ";
             MySqlCommand comando = new MySqlCommand(query, Conexao);
             MySqlDataReader Leitura = comando.ExecuteReader();
 
-            dt.Columns.Add("personagemID");
-            dt.Columns.Add("Nome do Personagem");
+            dt.Columns.Add("ID");
+            dt.Columns.Add("Nome");
             dt.Columns.Add("Papel");
-            dt.Columns.Add("Nome do Filme");
-            dt.Columns.Add("Nome do Ator");
+            dt.Columns.Add("Filme");
 
             if (Leitura.HasRows)
             {
@@ -88,7 +86,6 @@ namespace Sistema_Filmes_Atores.DAO
                     p.Nome = Leitura[1].ToString();
                     p.Papel = Leitura[2].ToString();
                     p.tituloFilme = Leitura[3].ToString();
-                    p.nomeAtor = Leitura[4].ToString();
                     dt.Rows.Add(p.LinhaLegivel());
                 }
             }
@@ -102,7 +99,7 @@ namespace Sistema_Filmes_Atores.DAO
             string Query = "";
             if (string.IsNullOrEmpty(search))
             {
-                Query = @"SELECT P.personagemid, P.nome, F.titulo, A.nome, P.papel FROM Personagens as P 
+                Query = @"SELECT P.personagemid, P.nome, P.papel, F.titulo FROM Personagens as P 
                             INNER JOIN ATORES as A ON A.Id = P.atorid
                             INNER JOIN FILMES as F ON F.Id = P.filmeid
                             Order by P.personagemId desc; ";
@@ -110,12 +107,11 @@ namespace Sistema_Filmes_Atores.DAO
             else
             {
                 Query = @"
-                        SELECT P.personagemid, P.nome, F.titulo, A.nome, P.papel 
+                        SELECT P.personagemid, P.nome, P.papel, F.titulo
                         FROM Personagens as P
                         INNER JOIN ATORES as A ON A.Id = P.atorid
                         INNER JOIN FILMES as F ON F.Id = P.filmeid
                         WHERE P.NOME LIKE '%" + search + @"%' 
-                           OR A.NOME LIKE '%" + search + @"%'
                            OR F.TITULO LIKE '%" + search + @"%'
                         ORDER BY P.personagemId DESC;
                                         ";
@@ -124,11 +120,10 @@ namespace Sistema_Filmes_Atores.DAO
 
             MySqlDataReader Leitura = Comando.ExecuteReader();
 
-            dt.Columns.Add("personagemID");
-            dt.Columns.Add("Nome do Personagem");
-            dt.Columns.Add("Nome do Filme");
-            dt.Columns.Add("Nome do Ator");
+            dt.Columns.Add("ID");
+            dt.Columns.Add("Nome");
             dt.Columns.Add("Papel");
+            dt.Columns.Add("Filme");
 
             if (Leitura.HasRows)
             {
@@ -137,9 +132,8 @@ namespace Sistema_Filmes_Atores.DAO
                     PersonagemEntidade p = new PersonagemEntidade();
                     p.personagemID = Convert.ToInt32(Leitura[0]);
                     p.Nome = Leitura[1].ToString();
-                    p.tituloFilme = Leitura[2].ToString();
-                    p.nomeAtor = Leitura[3].ToString();
-                    p.Papel = Leitura[4].ToString();
+                    p.Papel = Leitura[2].ToString();
+                    p.tituloFilme = Leitura[3].ToString();
                     dt.Rows.Add(p.LinhaLegivel());
                 }
             }
@@ -182,16 +176,14 @@ namespace Sistema_Filmes_Atores.DAO
             string Query = "";
             if (string.IsNullOrEmpty(search))
             {
-                Query = @"SELECT P.personagemid, P.nome, P.papel, A.nome, A.ID FROM Personagens as P 
-                            INNER JOIN ATORES as A ON A.Id = P.atorid
-                            Order by P.personagemId desc; ";
+                Query = @"SELECT personagemid, nome,papel FROM Personagens
+                            Order by personagemId desc; ";
             }
             else
             {
                 Query = @"
-                        SELECT P.personagemid, P.nome, P.papel, A.nome, A.ID 
+                        SELECT P.personagemid, P.nome, P.papel
                         FROM Personagens as P
-                        INNER JOIN ATORES as A ON A.Id = P.atorid
                         INNER JOIN FILMES as F ON F.Id = P.filmeid
                         WHERE F.TITULO = '" + search + @"'
                         ORDER BY P.personagemId DESC;
@@ -201,11 +193,9 @@ namespace Sistema_Filmes_Atores.DAO
 
             MySqlDataReader Leitura = Comando.ExecuteReader();
 
-            dt.Columns.Add("personagemID");
-            dt.Columns.Add("Nome do Personagem");
+            dt.Columns.Add("ID");
+            dt.Columns.Add("Nome");
             dt.Columns.Add("Papel");
-            dt.Columns.Add("Nome do Ator");
-            dt.Columns.Add("ID do Ator");
 
             if (Leitura.HasRows)
             {
@@ -215,8 +205,6 @@ namespace Sistema_Filmes_Atores.DAO
                     p.personagemID = Convert.ToInt32(Leitura[0]);
                     p.Nome = Leitura[1].ToString();
                     p.Papel = Leitura[2].ToString();
-                    p.nomeAtor = Leitura[3].ToString();
-                    p.atorID = Convert.ToInt32(Leitura[4]);
                     dt.Rows.Add(p.LinhaParaPersonagemAddEdit());
                 }
             }

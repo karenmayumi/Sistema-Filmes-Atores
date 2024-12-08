@@ -16,6 +16,9 @@ namespace Sistema_Filmes_Atores.Entidades
         public object[] Linha()
         {
             return new object[] { Id, Nome, NomeArtistico, Idade, Genero };
+        }public object[] LinhaParaPersonagem()
+        {
+            return new object[] { Id, Nome, NomeArtistico };
         }
     }
 }
