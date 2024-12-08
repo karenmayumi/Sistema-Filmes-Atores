@@ -149,7 +149,6 @@ namespace Sistema_Filmes_Atores
             this.txtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLogin.Location = new System.Drawing.Point(213, 209);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.PasswordChar = '*';
             this.txtLogin.Size = new System.Drawing.Size(399, 38);
             this.txtLogin.TabIndex = 22;
             // 

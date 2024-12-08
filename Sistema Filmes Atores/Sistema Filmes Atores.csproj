@@ -190,6 +190,18 @@
     <Compile Include="Formulários\frmpSelecionarAtor.Designer.cs">
       <DependentUpon>frmpSelecionarAtor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulários\frmUsuariosEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmUsuariosEditar.Designer.cs">
+      <DependentUpon>frmUsuariosEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +213,12 @@
     </Compile>
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuAdmin.Designer.cs">
+      <DependentUpon>frmMenuAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -231,11 +249,20 @@
     <EmbeddedResource Include="Formulários\frmpSelecionarAtor.resx">
       <DependentUpon>frmpSelecionarAtor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frmUsuariosEditar.resx">
+      <DependentUpon>frmUsuariosEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuAdmin.resx">
+      <DependentUpon>frmMenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

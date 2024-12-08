@@ -14,7 +14,6 @@ namespace Sistema_Filmes_Atores.Formulários
 {
     public partial class frmPersonagem : Form
     {
-        DataTable dados;
         AtorDAO atorDao = new AtorDAO();
         FilmeDAO filmeDao = new FilmeDAO();
         PersonagemDAO personagemDao = new PersonagemDAO();

@@ -1,4 +1,4 @@
-﻿using MapaSala.Classes;
+﻿using Sistema_Filmes_Atores.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +13,7 @@ namespace Sistema_Filmes_Atores
 {
     public partial class frmLogin : Form
     {
-        private Login login;
+        private Login login = new Login();
         public frmLogin()
         {
             InitializeComponent();
@@ -23,7 +23,14 @@ namespace Sistema_Filmes_Atores
         {
             login.Usuario = txtLogin.Text;
             login.Senha = txtSenha.Text;
-            if (login.Logar())
+            if (login.LogarAdmin())
+            {
+                frmMenuAdmin ma = new frmMenuAdmin();
+                ma.FormClosed += FecharForm;
+                this.Hide();
+                ma.Show();
+            }
+            else if (login.Logar())
             {
                 frmMenu m = new frmMenu();
                 m.FormClosed += FecharForm;

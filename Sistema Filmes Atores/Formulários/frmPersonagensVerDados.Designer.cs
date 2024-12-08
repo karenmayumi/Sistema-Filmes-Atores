@@ -180,6 +180,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
             this.btnEditar.Enabled = false;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Location = new System.Drawing.Point(556, 418);
@@ -195,6 +196,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.btnExcluir.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
             this.btnExcluir.Enabled = false;
+            this.btnExcluir.FlatAppearance.BorderSize = 0;
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Location = new System.Drawing.Point(662, 418);
@@ -223,6 +225,7 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             this.btnAdicionar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnAdicionar.BackColor = System.Drawing.Color.White;
+            this.btnAdicionar.FlatAppearance.BorderSize = 0;
             this.btnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionar.Location = new System.Drawing.Point(450, 376);
@@ -238,6 +241,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.btnSalvar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
             this.btnSalvar.Enabled = false;
+            this.btnSalvar.FlatAppearance.BorderSize = 0;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.Location = new System.Drawing.Point(450, 418);
@@ -289,6 +293,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.btnAtor.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnAtor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
             this.btnAtor.Enabled = false;
+            this.btnAtor.FlatAppearance.BorderSize = 0;
             this.btnAtor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtor.Font = new System.Drawing.Font("Century Gothic", 9.25F);
             this.btnAtor.Location = new System.Drawing.Point(450, 299);

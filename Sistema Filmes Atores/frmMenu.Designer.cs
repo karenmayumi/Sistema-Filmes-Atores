@@ -50,13 +50,14 @@ namespace Sistema_Filmes_Atores
             // 
             this.btnAtores.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAtores.BackColor = System.Drawing.Color.Snow;
+            this.btnAtores.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtores.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
             this.btnAtores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtores.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnAtores.Location = new System.Drawing.Point(284, 260);
+            this.btnAtores.Location = new System.Drawing.Point(291, 260);
             this.btnAtores.Name = "btnAtores";
-            this.btnAtores.Size = new System.Drawing.Size(175, 49);
+            this.btnAtores.Size = new System.Drawing.Size(182, 49);
             this.btnAtores.TabIndex = 6;
             this.btnAtores.Text = "Atores";
             this.btnAtores.UseVisualStyleBackColor = false;
@@ -66,6 +67,7 @@ namespace Sistema_Filmes_Atores
             // 
             this.btnFilmes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnFilmes.BackColor = System.Drawing.Color.Snow;
+            this.btnFilmes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFilmes.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnFilmes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFilmes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -73,9 +75,9 @@ namespace Sistema_Filmes_Atores
             this.btnFilmes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFilmes.ImageKey = "(nenhum/a)";
             this.btnFilmes.ImageList = this.imageList1;
-            this.btnFilmes.Location = new System.Drawing.Point(477, 260);
+            this.btnFilmes.Location = new System.Drawing.Point(494, 260);
             this.btnFilmes.Name = "btnFilmes";
-            this.btnFilmes.Size = new System.Drawing.Size(180, 49);
+            this.btnFilmes.Size = new System.Drawing.Size(182, 49);
             this.btnFilmes.TabIndex = 5;
             this.btnFilmes.Text = "Filmes";
             this.btnFilmes.UseVisualStyleBackColor = false;
@@ -117,6 +119,7 @@ namespace Sistema_Filmes_Atores
             // 
             this.btnPersonagens.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPersonagens.BackColor = System.Drawing.Color.Snow;
+            this.btnPersonagens.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPersonagens.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
             this.btnPersonagens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPersonagens.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,7 +139,7 @@ namespace Sistema_Filmes_Atores
             this.pictureBox2.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources.iconepersonagenss1;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.pictureBox2.Location = new System.Drawing.Point(132, 174);
+            this.pictureBox2.Location = new System.Drawing.Point(137, 174);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(83, 80);
             this.pictureBox2.TabIndex = 10;
@@ -148,7 +151,7 @@ namespace Sistema_Filmes_Atores
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources.iconeator2;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(330, 174);
+            this.pictureBox3.Location = new System.Drawing.Point(340, 175);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(87, 80);
             this.pictureBox3.TabIndex = 11;
@@ -160,7 +163,7 @@ namespace Sistema_Filmes_Atores
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources._4831192;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(525, 175);
+            this.pictureBox4.Location = new System.Drawing.Point(543, 175);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(83, 79);
             this.pictureBox4.TabIndex = 12;

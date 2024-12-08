@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -8,41 +9,53 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
-namespace MapadeSala.Classes
+namespace Sistema_Filmes_Atores.Classes
 {
     public class Usuarios
     {
 
-        private SqlConnection Conexao = new SqlConnection("Server=LS05MPF;Database=AULA_DS;User Id=sa;Password=admsasql;");
+        private MySqlConnection Conexao = new MySqlConnection("Server=localhost;Database=FilmesAtoreskarenluane;User Id=root;Password=;");
         public int Id { get; set; }
         public string Login { get; set; }
         public string Senha { get; set; }
         public bool Ativo { get; set; }
+        public bool Admin { get; set; }
 
-        public void Inserir()
+        public bool Inserir()
         {
             Conexao.Open();
-            string query = "Insert into Usuarios (Login , Senha, Ativo) " +
-                "               Values (@login, @senha, @ativo) ";
-            SqlCommand comando = new SqlCommand(query, Conexao);
+            string query = "Insert into Usuarios (Login , Senha, Ativo, admin) " +
+                "               Values (@login, @senha, @ativo, @admin) ";
+            MySqlCommand comando = new MySqlCommand(query, Conexao);
 
-            SqlParameter parametro1 = new SqlParameter("@login", Login);
-            SqlParameter parametro2 = new SqlParameter("@senha", Senha);
-            SqlParameter parametro3 = new SqlParameter("@ativo", Ativo);
+            MySqlParameter parametro1 = new MySqlParameter("@login", Login);
+            MySqlParameter parametro2 = new MySqlParameter("@senha", Senha);
+            MySqlParameter parametro3 = new MySqlParameter("@ativo", Ativo);
+            MySqlParameter parametro4 = new MySqlParameter("@admin", Admin);
 
             comando.Parameters.Add(parametro1);
             comando.Parameters.Add(parametro2);
             comando.Parameters.Add(parametro3);
-            comando.ExecuteNonQuery();
+            comando.Parameters.Add(parametro4);
+            bool resposta = Convert.ToBoolean(comando.ExecuteNonQuery());
+            if (resposta)
+            {
+                MessageBox.Show("Usuário inserido com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Erro ao inserir", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             Conexao.Close();
+            return resposta;
         }
 
         public DataTable PreencherGrid()
         {
             DataTable dataTable = new DataTable();
-            string query = "SELECT Id, Login, Ativo FROM Usuarios order by Id desc";
+            string query = "SELECT Id, Login, Ativo, Admin FROM Usuarios order by Id desc";
             Conexao.Open();
-            SqlDataAdapter adapter = new SqlDataAdapter(query, Conexao);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(query, Conexao);
             try
             {
                 adapter.Fill(dataTable);
@@ -62,14 +75,14 @@ namespace MapadeSala.Classes
             string query = "";
             if (string.IsNullOrEmpty(pesquisa))
             {
-                query = "SELECT Id, Login, Ativo Nome FROM Usuarios order by Id desc";
+                query = "SELECT Id, Login, Ativo, Admin FROM Usuarios order by Id desc";
             }
             else
             {
-                query = "SELECT Id, Login, Ativo Nome FROM Usuarios Where Login like '%" + pesquisa + "%' Order by Id desc";
+                query = "SELECT Id, Login, Ativo, Admin FROM Usuarios Where Login like '%" + pesquisa + "%' Order by Id desc";
             }
 
-            SqlDataAdapter adapter = new SqlDataAdapter(query, Conexao);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(query, Conexao);
             try
             {
                 adapter.Fill(dataTable);
@@ -82,34 +95,37 @@ namespace MapadeSala.Classes
             return dataTable;
         }
 
-        public void Editar()
+        public bool Editar()
         {
-            string query = "update Usuarios set Login = @login, Senha = @senha, Ativo = @ativo WHERE  Id = @id";
+            string query = "update Usuarios set Login = @login, Senha = @senha, Ativo = @ativo, Admin = @admin WHERE  Id = @id";
             Conexao.Open();
-            SqlCommand comando = new SqlCommand(query, Conexao);
-            comando.Parameters.Add(new SqlParameter("@login", Login));
-            comando.Parameters.Add(new SqlParameter("@senha", Senha));
-            comando.Parameters.Add(new SqlParameter("@ativo", Ativo));
-            comando.Parameters.Add(new SqlParameter("@id", Id));
-            int resposta = comando.ExecuteNonQuery();
-            if (resposta == 1)
+            MySqlCommand comando = new MySqlCommand(query, Conexao);
+            comando.Parameters.Add(new MySqlParameter("@login", Login));
+            comando.Parameters.Add(new MySqlParameter("@senha", Senha));
+            comando.Parameters.Add(new MySqlParameter("@ativo", Ativo));
+            comando.Parameters.Add(new MySqlParameter("@admin", Admin));
+            comando.Parameters.Add(new MySqlParameter("@id", Id));
+            bool resposta = Convert.ToBoolean(comando.ExecuteNonQuery());
+            if (resposta)
             {
-                MessageBox.Show("Usuário Atualizado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Usuário atualizado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 MessageBox.Show("Erro ao atualizar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            Conexao.Close();
+            return resposta;
         }
 
-        public void Excluir()
+        public bool Excluir()
         {
             string query = "Delete from Usuarios WHERE  Id = @id";
             Conexao.Open();
-            SqlCommand comando = new SqlCommand(query, Conexao);
-            comando.Parameters.Add(new SqlParameter("@id", Id));
-            int resposta = comando.ExecuteNonQuery();
-            if (resposta == 1)
+            MySqlCommand comando = new MySqlCommand(query, Conexao);
+            comando.Parameters.Add(new MySqlParameter("@id", Id));
+            bool resposta = Convert.ToBoolean(comando.ExecuteNonQuery());
+            if (resposta)
             {
                 MessageBox.Show("Usuário Excluído com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -117,16 +133,18 @@ namespace MapadeSala.Classes
             {
                 MessageBox.Show("Erro ao excluir", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            Conexao.Close();
+            return resposta;
         }
 
         public void PesquisarPorId(int id)
         {
             DataTable dataTable = new DataTable();
             Conexao.Open();
-            string query = "SELECT Id, Login, Senha, Ativo Nome FROM Usuarios Where Id = @id Order by Id desc";
-            SqlCommand Comando = new SqlCommand(query, Conexao);
+            string query = "SELECT Id, Login, Senha, Ativo, Admin FROM Usuarios Where Id = @id Order by Id desc";
+            MySqlCommand Comando = new MySqlCommand(query, Conexao);
             Comando.Parameters.AddWithValue("@id", id);
-            SqlDataReader resultado = Comando.ExecuteReader();
+            MySqlDataReader resultado = Comando.ExecuteReader();
 
             if (resultado.Read())
             {
@@ -134,6 +152,7 @@ namespace MapadeSala.Classes
                 Login = resultado.GetString(1);
                 Senha = resultado.GetString(2);
                 Ativo = resultado.GetBoolean(3);
+                Admin = resultado.GetBoolean(4);
             }
 
             Conexao.Close();
