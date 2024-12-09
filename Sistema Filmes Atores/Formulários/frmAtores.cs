@@ -34,14 +34,6 @@ namespace Sistema_Filmes_Atores.Formulários
         {
             LinhaSelecionada = e.RowIndex;
         }
-        private void btnAtorAdd_Click(object sender, EventArgs e)
-        {
-            frmAtoresAdicionar atoresadd = new frmAtoresAdicionar();
-
-            //Inscreve-se no evento
-            atoresadd.FormClosed += frmCursos_FormClosed;
-            atoresadd.ShowDialog();
-        }
 
         private void txtPesquisar_TextChanged(object sender, EventArgs e)
         {
@@ -64,9 +56,13 @@ namespace Sistema_Filmes_Atores.Formulários
             editar.ShowDialog();
         }
 
-        private void frmAtores_Load(object sender, EventArgs e)
+        private void btnAtorAdd_Click_1(object sender, EventArgs e)
         {
+            frmAtoresAdicionar atoresadd = new frmAtoresAdicionar();
 
+            //Inscreve-se no evento
+            atoresadd.FormClosed += frmCursos_FormClosed;
+            atoresadd.ShowDialog();
         }
     }
 }

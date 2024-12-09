@@ -140,6 +140,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.MaximumSize = new System.Drawing.Size(402, 434);
             this.MinimumSize = new System.Drawing.Size(402, 434);
             this.Name = "frmpSelecionarAtor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmpSelecionarAtor";
             ((System.ComponentModel.ISupportInitialize)(this.dtAtor)).EndInit();
             this.ResumeLayout(false);

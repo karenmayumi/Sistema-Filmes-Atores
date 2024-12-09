@@ -44,8 +44,10 @@ namespace Sistema_Filmes_Atores.Formulários
             this.radAtivo = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.grbTipo.SuspendLayout();
             this.grbAtivo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblId
@@ -54,7 +56,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.lblId.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblId.Location = new System.Drawing.Point(43, 36);
+            this.lblId.Location = new System.Drawing.Point(42, 45);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(66, 17);
             this.lblId.TabIndex = 112;
@@ -67,11 +69,11 @@ namespace Sistema_Filmes_Atores.Formulários
             this.txtSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.txtSenha.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtSenha.Location = new System.Drawing.Point(47, 154);
+            this.txtSenha.Location = new System.Drawing.Point(46, 163);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(263, 22);
+            this.txtSenha.Size = new System.Drawing.Size(263, 24);
             this.txtSenha.TabIndex = 108;
             // 
             // txtLogin
@@ -79,11 +81,11 @@ namespace Sistema_Filmes_Atores.Formulários
             this.txtLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.txtLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.txtLogin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLogin.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtLogin.Location = new System.Drawing.Point(46, 81);
+            this.txtLogin.Location = new System.Drawing.Point(45, 90);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(263, 22);
+            this.txtLogin.Size = new System.Drawing.Size(263, 24);
             this.txtLogin.TabIndex = 107;
             // 
             // btnAdicionar
@@ -93,7 +95,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.btnAdicionar.FlatAppearance.BorderSize = 0;
             this.btnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionar.Location = new System.Drawing.Point(144, 359);
+            this.btnAdicionar.Location = new System.Drawing.Point(143, 368);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(167, 33);
             this.btnAdicionar.TabIndex = 106;
@@ -120,7 +122,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Window;
-            this.label8.Location = new System.Drawing.Point(43, 126);
+            this.label8.Location = new System.Drawing.Point(42, 135);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(95, 25);
             this.label8.TabIndex = 104;
@@ -133,7 +135,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(43, 53);
+            this.label4.Location = new System.Drawing.Point(42, 62);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 25);
             this.label4.TabIndex = 103;
@@ -175,7 +177,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.grbTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbTipo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbTipo.ForeColor = System.Drawing.SystemColors.Control;
-            this.grbTipo.Location = new System.Drawing.Point(48, 195);
+            this.grbTipo.Location = new System.Drawing.Point(47, 204);
             this.grbTipo.Name = "grbTipo";
             this.grbTipo.Size = new System.Drawing.Size(261, 61);
             this.grbTipo.TabIndex = 115;
@@ -191,7 +193,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.grbAtivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbAtivo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbAtivo.ForeColor = System.Drawing.SystemColors.Control;
-            this.grbAtivo.Location = new System.Drawing.Point(46, 276);
+            this.grbAtivo.Location = new System.Drawing.Point(45, 285);
             this.grbAtivo.Name = "grbAtivo";
             this.grbAtivo.Size = new System.Drawing.Size(261, 61);
             this.grbAtivo.TabIndex = 116;
@@ -246,7 +248,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.btnExcluir.FlatAppearance.BorderSize = 0;
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(46, 359);
+            this.btnExcluir.Location = new System.Drawing.Point(45, 368);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(92, 33);
             this.btnExcluir.TabIndex = 117;
@@ -255,12 +257,24 @@ namespace Sistema_Filmes_Atores.Formulários
             this.btnExcluir.Visible = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBox2.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources.Logo_Locadora_removebg_preview__1_;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(141, 29);
+            this.pictureBox2.TabIndex = 118;
+            this.pictureBox2.TabStop = false;
+            // 
             // frmUsuariosEditar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(359, 446);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.grbAtivo);
             this.Controls.Add(this.grbTipo);
@@ -273,11 +287,13 @@ namespace Sistema_Filmes_Atores.Formulários
             this.MaximumSize = new System.Drawing.Size(433, 551);
             this.MinimumSize = new System.Drawing.Size(307, 424);
             this.Name = "frmUsuariosEditar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUsuarioEditar";
             this.grbTipo.ResumeLayout(false);
             this.grbTipo.PerformLayout();
             this.grbAtivo.ResumeLayout(false);
             this.grbAtivo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,5 +316,6 @@ namespace Sistema_Filmes_Atores.Formulários
         private System.Windows.Forms.RadioButton radAtivo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -22,26 +22,7 @@ namespace Sistema_Filmes_Atores.Formulários
 
         private void btnAddFilme_Click(object sender, EventArgs e)
         {
-            FilmeEntidade filme = new FilmeEntidade();
-            filme.Titulo = txtTitulo.Text;
-            filme.Categoria = txtCategoria.Text;
-            filme.Duracao = Convert.ToInt32(numSegundosTotais.Value);
-            filme.IdadeIndicada = Convert.ToInt32(numIdade.Value);
-            filme.Vlr_Diaria = Convert.ToDecimal(numVlrDiaria.Text);
-            filme.Sinopse = rtxtSinopse.Text;
-
-
-            int resposta = dao.Inserir(filme);
-
-            if (resposta == 1)
-            {
-                MessageBox.Show("Filme adicionado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Erro ao atualizar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
         private void numHoras_Leave(object sender, EventArgs e)
         {
@@ -129,6 +110,30 @@ namespace Sistema_Filmes_Atores.Formulários
         private void numSegundosTotais_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddFilme_Click_1(object sender, EventArgs e)
+        {
+            FilmeEntidade filme = new FilmeEntidade();
+            filme.Titulo = txtTitulo.Text;
+            filme.Categoria = txtCategoria.Text;
+            filme.Duracao = Convert.ToInt32(numSegundosTotais.Value);
+            filme.IdadeIndicada = Convert.ToInt32(numIdade.Value);
+            filme.Vlr_Diaria = Convert.ToDecimal(numVlrDiaria.Text);
+            filme.Sinopse = rtxtSinopse.Text;
+
+
+            int resposta = dao.Inserir(filme);
+
+            if (resposta == 1)
+            {
+                MessageBox.Show("Filme adicionado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Erro ao atualizar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

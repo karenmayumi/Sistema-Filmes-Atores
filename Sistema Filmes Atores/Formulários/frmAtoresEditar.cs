@@ -27,25 +27,7 @@ namespace Sistema_Filmes_Atores.Formulários
             numIdade.Value = ator.Idade;
             cbxGenero.Text = ator.Genero;
         }
-
-        private void btnDeleteAtor_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(txtId.Text);
-
-            int resposta = dao.ExcluirAtor(id);
-
-            if (resposta == 1)
-            {
-                MessageBox.Show("Ator excluído com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Erro ao excluir", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnEditAtor_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
             AtorEntidade ator = new AtorEntidade();
             ator.Id = Convert.ToInt32(txtId.Text);
@@ -65,12 +47,23 @@ namespace Sistema_Filmes_Atores.Formulários
             {
                 MessageBox.Show("Erro ao atualizar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void btnExcluir_Click(object sender, EventArgs e)
         {
+            int id = Convert.ToInt32(txtId.Text);
 
+            int resposta = dao.ExcluirAtor(id);
+
+            if (resposta == 1)
+            {
+                MessageBox.Show("Ator excluído com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Erro ao excluir", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

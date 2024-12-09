@@ -32,14 +32,6 @@ namespace Sistema_Filmes_Atores
             dtFilmes.DataSource = dados;
         }
 
-        private void btnFilmeAdd_Click(object sender, EventArgs e)
-        {
-            frmFilmesAdicionar addFilme = new frmFilmesAdicionar();
-            //Inscreve-se no evento
-            addFilme.FormClosed += frmFilmes_FormClosed;
-            addFilme.ShowDialog();
-        }
-
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
             dtFilmes.DataSource = dao.PesquisarFilmes(txtPesquisa.Text);
@@ -67,9 +59,13 @@ namespace Sistema_Filmes_Atores
             LinhaSelecionada = e.RowIndex;
         }
 
-        private void frmFilmes_Load(object sender, EventArgs e)
+        private void btnFilmeAdd_Click_1(object sender, EventArgs e)
         {
 
+            frmFilmesAdicionar addFilme = new frmFilmesAdicionar();
+            //Inscreve-se no evento
+            addFilme.FormClosed += frmFilmes_FormClosed;
+            addFilme.ShowDialog();
         }
     }
 }

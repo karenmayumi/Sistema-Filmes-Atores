@@ -38,47 +38,51 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label3 = new System.Windows.Forms.Label();
             this.txtNomeArtistico = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numIdade)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddAtor
             // 
-            this.btnAddAtor.BackColor = System.Drawing.SystemColors.Window;
+            this.btnAddAtor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
             this.btnAddAtor.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
             this.btnAddAtor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAtor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAtor.ForeColor = System.Drawing.Color.Brown;
-            this.btnAddAtor.Location = new System.Drawing.Point(76, 257);
+            this.btnAddAtor.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Bold);
+            this.btnAddAtor.ForeColor = System.Drawing.Color.White;
+            this.btnAddAtor.Location = new System.Drawing.Point(101, 331);
             this.btnAddAtor.Name = "btnAddAtor";
-            this.btnAddAtor.Size = new System.Drawing.Size(130, 29);
+            this.btnAddAtor.Size = new System.Drawing.Size(120, 39);
             this.btnAddAtor.TabIndex = 27;
-            this.btnAddAtor.Text = "Adicionar Ator/Atriz";
+            this.btnAddAtor.Text = "Adicionar";
             this.btnAddAtor.UseVisualStyleBackColor = false;
             this.btnAddAtor.Click += new System.EventHandler(this.btnAddAtor_Click);
             // 
             // numIdade
             // 
-            this.numIdade.Location = new System.Drawing.Point(55, 172);
+            this.numIdade.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numIdade.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numIdade.Location = new System.Drawing.Point(79, 223);
             this.numIdade.Name = "numIdade";
-            this.numIdade.Size = new System.Drawing.Size(171, 20);
+            this.numIdade.Size = new System.Drawing.Size(171, 22);
             this.numIdade.TabIndex = 23;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(55, 86);
+            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(78, 108);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(171, 20);
+            this.txtNome.Size = new System.Drawing.Size(171, 19);
             this.txtNome.TabIndex = 21;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(55, 152);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(78, 197);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 17);
+            this.label2.Size = new System.Drawing.Size(71, 23);
             this.label2.TabIndex = 16;
             this.label2.Text = "Idade:";
             // 
@@ -86,67 +90,71 @@ namespace Sistema_Filmes_Atores.Formulários
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(55, 66);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(78, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 17);
+            this.label1.Size = new System.Drawing.Size(71, 23);
             this.label1.TabIndex = 15;
             this.label1.Text = "Nome:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cbxGenero
             // 
+            this.cbxGenero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxGenero.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxGenero.FormattingEnabled = true;
             this.cbxGenero.Items.AddRange(new object[] {
             "Homem",
             "Mulher",
             "Não Binário"});
-            this.cbxGenero.Location = new System.Drawing.Point(54, 218);
+            this.cbxGenero.Location = new System.Drawing.Point(77, 281);
             this.cbxGenero.Name = "cbxGenero";
-            this.cbxGenero.Size = new System.Drawing.Size(172, 21);
+            this.cbxGenero.Size = new System.Drawing.Size(172, 28);
             this.cbxGenero.TabIndex = 29;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(54, 195);
+            this.label3.Location = new System.Drawing.Point(77, 255);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 20);
+            this.label3.Size = new System.Drawing.Size(84, 23);
             this.label3.TabIndex = 30;
             this.label3.Text = "Gênero:";
             // 
             // txtNomeArtistico
             // 
-            this.txtNomeArtistico.Location = new System.Drawing.Point(55, 129);
+            this.txtNomeArtistico.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNomeArtistico.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeArtistico.Location = new System.Drawing.Point(79, 166);
             this.txtNomeArtistico.Name = "txtNomeArtistico";
-            this.txtNomeArtistico.Size = new System.Drawing.Size(171, 20);
+            this.txtNomeArtistico.Size = new System.Drawing.Size(171, 19);
             this.txtNomeArtistico.TabIndex = 32;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(52, 109);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(78, 140);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 17);
+            this.label4.Size = new System.Drawing.Size(150, 23);
             this.label4.TabIndex = 31;
             this.label4.Text = "Nome Artístico:";
             // 
-            // label5
+            // label6
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Book Antiqua", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(54, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 23);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Cadastro de Atores";
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Italic);
+            this.label6.ForeColor = System.Drawing.SystemColors.Window;
+            this.label6.Location = new System.Drawing.Point(33, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(267, 33);
+            this.label6.TabIndex = 79;
+            this.label6.Text = "Cadastro de Ator";
             // 
             // frmAtoresAdicionar
             // 
@@ -154,8 +162,8 @@ namespace Sistema_Filmes_Atores.Formulários
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Sistema_Filmes_Atores.Properties.Resources.FundoAdicionarAtores;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(279, 360);
-            this.Controls.Add(this.label5);
+            this.ClientSize = new System.Drawing.Size(332, 422);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNomeArtistico);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -166,9 +174,11 @@ namespace Sistema_Filmes_Atores.Formulários
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.MaximumSize = new System.Drawing.Size(348, 461);
+            this.MinimumSize = new System.Drawing.Size(348, 461);
             this.Name = "frmAtoresAdicionar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
-            this.Load += new System.EventHandler(this.frmAtoresAdicionar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numIdade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -186,6 +196,6 @@ namespace Sistema_Filmes_Atores.Formulários
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNomeArtistico;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -107,11 +107,11 @@ namespace Sistema_Filmes_Atores
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 36F, System.Drawing.FontStyle.Italic);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(231, 79);
+            this.label1.Location = new System.Drawing.Point(196, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(301, 47);
+            this.label1.Size = new System.Drawing.Size(375, 60);
             this.label1.TabIndex = 8;
             this.label1.Text = "Menu de Telas";
             // 

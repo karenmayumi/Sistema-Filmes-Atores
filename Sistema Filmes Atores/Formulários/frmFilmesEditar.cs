@@ -87,19 +87,7 @@ namespace Sistema_Filmes_Atores.Formulários
 
         private void btnDeleteAtor_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txtId.Text);
-
-            int resposta = dao.ExcluirFilme(id);
-
-            if (resposta == 1)
-            {
-                MessageBox.Show("Filme excluído com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Erro ao excluir", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
 
         private void numSegundosTotais_KeyDown(object sender, KeyEventArgs e)
@@ -188,6 +176,23 @@ namespace Sistema_Filmes_Atores.Formulários
         private void txtCategoria_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDeleteFilme_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtId.Text);
+
+            int resposta = dao.ExcluirFilme(id);
+
+            if (resposta == 1)
+            {
+                MessageBox.Show("Filme excluído com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Erro ao excluir", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

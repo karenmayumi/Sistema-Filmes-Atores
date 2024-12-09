@@ -40,7 +40,6 @@ namespace Sistema_Filmes_Atores.Formulários
             this.label10 = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -207,20 +206,6 @@ namespace Sistema_Filmes_Atores.Formulários
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label6.ForeColor = System.Drawing.SystemColors.Window;
-            this.label6.Location = new System.Drawing.Point(39, 487);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(309, 19);
-            this.label6.TabIndex = 94;
-            this.label6.Text = "clicado do filme(essa mensagem é invisível)";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.Visible = false;
-            // 
             // btnAdicionar
             // 
             this.btnAdicionar.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -368,7 +353,6 @@ namespace Sistema_Filmes_Atores.Formulários
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnAdicionar);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.label10);
@@ -382,6 +366,7 @@ namespace Sistema_Filmes_Atores.Formulários
             this.Controls.Add(this.pictureBox1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "frmPersonagensVerDados";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personagem";
             ((System.ComponentModel.ISupportInitialize)(this.dtPersonagens)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -404,7 +389,6 @@ namespace Sistema_Filmes_Atores.Formulários
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.TextBox txtNome;
